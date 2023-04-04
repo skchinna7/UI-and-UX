@@ -1,0 +1,85 @@
+@thin: 100;
+@light: 300;
+@normal: 400;
+@medium: 500;
+@bold: 700;
+@extra_bold: 900;
+
+@font_main: 'Roboto', Arial, serif;
+
+@color_primary: #1ab282;
+@color_secondary: #128af0;
+@color_bg: #fff;
+@color_highlight: #dccd88;
+
+.transition(@property: all; @duration: 0.25s; @func: ease-in-out; @delay: 0s) {
+	-webkit-transition: @arguments;
+	-moz-transition: @arguments;
+	transition: @arguments;
+}
+.transform(@property) {
+    -moz-transform: @property;
+    -webkit-transform: @property;
+    -o-transform: @property;
+    -ms-transform: @property;
+    transform: @property;
+}
+.border-radius(@radius) when (@radius = none) {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+.border-radius(@radius) when (default()) {
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	border-radius: @radius;
+}
+.border-top-left-radius(@radius) {
+	-moz-border-top-left-radius: @radius;
+	-webkit-border-top-left-radius: @radius;
+	border-top-left-radius: @radius;
+}
+.border-top-right-radius(@radius) {
+	-moz-border-top-right-radius: @radius;
+	-webkit-border-top-right-radius: @radius;
+	border-top-right-radius: @radius;
+}
+.border-bottom-right-radius(@radius) {
+	-moz-border-bottom-right-radius: @radius;
+	-webkit-border-bottom-right-radius: @radius;
+	border-bottom-right-radius: @radius;
+}
+.border-bottom-left-radius(@radius) {
+	-moz-border-bottom-left-radius: @radius;
+	-webkit-border-bottom-left-radius: @radius;
+	border-bottom-left-radius: @radius;
+}
+.box-shadow(@coords: 1px; @color: #000) when (@coords = none) {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.box-shadow(@coords: 1px; @color: #000) when (default()) {
+	-webkit-box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	box-shadow: @arguments;
+}
+.grayscale(@value) when (@value = 0) {
+	-webkit-filter: grayscale(0);
+	-moz-filter: grayscale(0);
+	filter: grayscale(0);
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+}
+.grayscale(@value) when (default()) {
+	-webkit-filter: grayscale(@value);
+	-moz-filter: grayscale(@value);
+	filter: gray;
+	filter: grayscale(@value);
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+}
+.opacity(@value) {
+	-moz-opacity: @value;
+	-khtml-opacity: @value;
+	opacity: @value;
+}
