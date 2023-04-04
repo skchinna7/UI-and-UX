@@ -1,0 +1,83 @@
+body {
+  color: #fff;
+}
+
+.choice-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  background-color: #125dff;
+  font-size: 3rem;
+  min-width: 80rem;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+          box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transform: transform 100px;
+          transform: transform 100px;
+}
+
+.choice-prefix {
+  padding: 2rem 2.5rem;
+  width: 100%;
+}
+
+.choice-text {
+  padding: 2rem;
+  width: 100%;
+}
+
+.correct {
+  background: linear-gradient(32deg, #0bdf24 0%, #29e86f 100%);
+}
+
+.incorrect {
+  background: linear-gradient(32deg, #e61d1d 0%, #e00b0b 100%);
+}
+
+/* Heads on Display */
+#hud {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hud-main-text {
+  text-align: center;
+}
+
+#progressBar {
+  width: 20rem;
+  height: 3rem;
+  border: 0.2rem solid #0bdf24;
+  margin-top: 2rem;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+#progressBarFull {
+  height: 200%;
+  background: #0bdf24;
+  width: 0%;
+}
+
+@media screen and (max-width: 768px) {
+  .choice-container {
+    min-width: 40rem;
+  }
+}
+/*# sourceMappingURL=game.css.map */
