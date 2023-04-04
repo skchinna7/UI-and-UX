@@ -1,0 +1,143 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-top-highlight-color: transparent;
+    overflow-y: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    font-weight: normal;
+    text-align: left;
+}
+
+article, aside, details, figcaption, figure, footer, hgroup, main, section, summary {
+    display: block;
+}
+
+header {
+    width: 100%;
+    display: inline-block;
+}
+
+nav {
+    display: inline-block;
+    text-align: right;
+}
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h1 {
+    text-align: center;
+    color: #585858;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: normal;
+    line-height: 1;
+}
+
+ul, ol, li, dl {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+    color: #000000;
+    transition: .5s ease;
+}
+
+a:active, a:hover {
+    outline: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+button, select {
+    text-transform: none;
+}
+
+input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.logo {
+    display: inline-block;
+    width: 30%;
+    font-size: 40px;
+    color: #00bfff;
+    cursor: pointer;
+}
+
+.title {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+}
+
+.pri-nav {
+    width: 29%;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.main-content {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.form {
+    background-color: #ffffff;
+    padding: 15px;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 4px #00bfff;
+    transition: .5 ease;
+}
