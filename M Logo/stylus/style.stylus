@@ -1,0 +1,68 @@
+.logo
+  height 150px
+  margin 10px
+  width 150px
+
+  path
+    stroke rgba(0, 0, 0, 0.1)
+    stroke-width 1
+
+  .top
+    fill-opacity 0.9
+
+.logo
+  &.blue
+    .top
+      fill #2980b9
+
+    .left, .right
+      fill #3498db
+
+  &.red
+    .top
+      fill #c0392b
+
+    .left, .right
+      fill #e74c3c
+
+  &.yellow
+    .top
+      fill #f39c12
+
+    .left, .right
+      fill #f1c40f
+
+  &.green
+    .top
+      fill #27ae60
+
+    .left, .right
+      fill #2ecc71
+
+  &.purple
+    .top
+      fill #8e44ad
+
+    .left, .right
+      fill #9b59b6
+
+  &.light-grey
+    .top
+      fill #bdc3c7
+
+    .left, .right
+      fill #7f8c8d
+
+  &.orange
+    .top
+      fill #d35400
+
+    .left, .right
+      fill #e67e22
+
+  &.dark-grey
+    .top
+      fill #2c3e50
+
+    .left, .right
+      fill #34495e

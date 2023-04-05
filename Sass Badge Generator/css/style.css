@@ -1,0 +1,175 @@
+//============================
+//==General Settings==========
+//============================
+
+*{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;  box-sizing: border-box;}
+
+
+/*
+============================
+====The Badge Magic=========
+============================
+*/
+
+/*
+Settings
+========
+*/
+
+/*
+Define your background color. 
+(It is important that the product images, or whatever you want to put a badge on, sit on a flat colored background.)
+*/
+$bg: $white;
+
+/*Everything between 10 and 16px looks good.*/
+$badge-font-size: 13px;
+
+/*Pick a style:*/
+$style: flat; //use 'flat' or 'skeuomorph'
+
+/*Pick a position*/
+$position: left; //You can choose between 'left' & 'right'
+/*
+==Define your badges!==
+
+1. Identifier. This is the name you use in your data-badge attributes in the HTML-
+
+2. Color. The background color of the badge. Depending on how light that color is, the text will appear either in white or  a darkened version of the background color.
+
+3. Text. The actual text that appears on the badge.
+
+As an example, I defined 7 different badges:
+*/
+$badges: ('new', $blue, 'New!')
+         ('sold', $peach, 'Sold!')
+         ('left-2', $yellow, '2 Left!')
+         ('left-5', $yellow, '5 Left!')        
+         ('premium', $green, 'Premium')
+         ('awesome', $midnight, 'Fancy!')
+         ('cute', $white, 'Cute :)');
+
+
+/*The Magic(tm)*/
+[data-badge]{
+  position: relative;
+  &:before{
+    font-family: sans-serif;
+    content: 'text';
+    font-size: $badge-font-size;
+    padding-top: .4em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    display:block;
+    width: 6.5em;
+    position: absolute;
+    height: 1.5em;
+    @if $position == left {
+      top: .76em;
+      left: -1.54em;
+      @include transform2d(rotate(-45deg)); 
+    }
+    @if $position == right {
+      top: .76em;
+      right: -.3em;
+      @include transform2d(rotate(45deg));  
+     }
+     
+  }
+  &:after{
+    content: '';
+    background: transparent;
+    border-top: 1em solid;
+    border-color: $bg;
+    display:block;
+    width: 8em;
+    pointer-events: none;
+    position: absolute;
+    height: 8em;
+    top: -1em;
+    @if $position == left {
+      left: -1em;
+      border-left: 1em solid $bg;
+    }
+    @if $position == right {
+      right: 0;
+      border-right: 1em solid $bg;
+    }
+  }
+}
+
+@each $thing in $badges{
+  [data-badge=#{nth($thing, 1)}]:before{
+    content: nth($thing, 3);
+    background: nth($thing, 2);
+      @if lightness(nth($thing, 2)) < 73% {
+        color: white;
+      }
+      @else{
+        color: darken(nth($thing, 2), 45);
+      }
+      @if $style == skeuomorph {
+        text-shadow: 0 0 3px rgba(black, .4);
+            
+        box-shadow: 0 -4px 0 0 rgba(darken(nth($thing,2), 6), .5) inset,  0 4px 0 0 rgba(darken(nth($thing,2), 6), .5) inset, 0 4px 3px -1px rgba(black, .4);
+        @if $position == left {
+        background: linear-gradient(135deg, darken(nth($thing, 2),5) 0%, darken(nth($thing, 2),5) 2%, transparent 34%),
+          linear-gradient(-135deg, nth($thing,2) 0%, nth($thing,2) 18%,lighten(nth($thing,2), 20) 24%, nth($thing,2) 34%); 
+        }
+        @if $position == right {
+        background: linear-gradient(-135deg, darken(nth($thing, 2),5) 0%, darken(nth($thing, 2),5) 2%, transparent 34%),
+          linear-gradient(135deg, nth($thing,2) 0%, nth($thing,2) 18%,lighten(nth($thing,2), 20) 24%, nth($thing,2) 34%); 
+        }
+
+      }
+
+  }
+}
+
+
+/*Demo Code*/
+
+@mixin bp($point) {
+  @if $point == l {
+    @media (min-width: 50em) { @content; }
+  }
+  @else if $point == m {
+    @media (min-width: 30em) { @content; }
+  }
+  @else if $point == s {
+    @media (min-width: 25em) { @content; }
+  }
+}
+
+body {
+  background: $bg; 
+}
+.demo{
+  @include column-count(1);
+  @include column-gap(0);
+  @include bp(m){@include column-count(2);}
+  @include bp(l){@include column-count(4);}
+}
+.product{
+  background: white;
+  padding: 1em;
+  z-index: 100;
+  width: 95%;
+  margin: 2%;
+  font-family: sans-serif;
+  display: inline-block;
+  h2 {
+    font-weight: bold;
+    padding-top: 1em;
+    color: rgb(40,40,40);
+  }
+  img, iframe {
+    width: 100%;
+  }
+  .description {
+    color: rgb(100,100,100);
+  }
+}
+
+

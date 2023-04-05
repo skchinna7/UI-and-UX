@@ -1,0 +1,145 @@
+@import "compass/css3";
+
+$fg: #ddd;
+$bg: #333;
+$bg2: darken($bg, 3%);
+$navItems: 5;
+
+body {
+  background: $bg;
+  color: $fg;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  overflow: hidden;
+}
+
+
+h1, h2, h3 { font-weight: 200; }
+h4, h5, h6 { 
+  font-size: 1em;
+  font-style: italic;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.33em;
+  margin-bottom: 0;
+  & + * { margin-top: 0.5em; }
+}
+
+h1 { font-size: 2.5em }
+h2 { font-size: 2em }
+h3 { font-size: 1.75em }
+h4, h5, h6 {
+  font-size: 1.2em;
+}
+
+
+
+#container {
+  position: relative;
+  min-height: 100%;
+  margin: 0 -300px 0 300px;
+  padding: 1px 1.2em;
+  background: $bg;
+  border: solid $bg2;
+  border-width: 0 1px;  
+  box-shadow: -3px 0 3px -3px $bg2, 3px 0 3px -3px $bg2;
+  color: darken($fg, 33%);
+}
+
+#nav {
+  position: fixed;
+  text-align: right;
+  width: 300px;
+  left: 0px;
+  margin: 15px 0;
+  
+  #showmenu {
+    background: transparent;
+    color: #ddd;
+    font-size: 1.8em;
+    margin-top: 1.33em;
+    display: default;
+  }
+  
+  ul { 
+    position: relative;
+    z-index: -1;  
+    margin: 0.5em 0; 
+    list-style: none;
+    // display: none;
+    padding: 0;
+    @for $i from 1 through $navItems {
+      li:nth-child(#{$i}) { 
+        a { background-color: hsl( (360 / $navItems) * $i, 100%, 66%); }
+        transition-delay: ( .03s * $i ); 
+      }
+    }
+    
+    li { 
+      position: relative;
+      margin: 0.5em 0; 
+      left: 150px;
+      @extend .extendRight;
+      transition: left .2s ease;
+      transition-delay: 0;
+      a:hover {
+        background-color: #fff;
+      }
+    }
+  }
+  
+  .show {
+    li {
+      left: 0;
+    }
+  }
+  
+  a { 
+    font-weight: bold;
+    text-decoration: none;
+    color: #222;
+    background-color: $bg;
+    display: inline-block;
+    padding: .4em .6em;
+    font-size: 18px;
+    line-height: 25px;
+    
+    transition: all 0.18s ease;
+    
+    
+  }
+  
+}
+
+.extendRight {
+  margin-right: -50px;
+  padding-right: 50px;
+}
+
+body[onload="_l='t';"] #nav ul li {
+  left: 0 !important;
+}
+
+#hint {
+  position: fixed;
+  padding: .5em .66em;
+  font-weight: 400;
+  top: 0;
+  left: 0;
+  background: #eee;
+  color: #333;
+  opacity: 0.96;
+  margin-left: 10px;
+  border-radius: 2px;
+  box-shadow: 0 0 11px 2px #222;
+  
+  &:after {
+    border: 6px solid;    
+    border-color: transparent #eee transparent transparent;
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    margin-top: -6px;
+  }
+}

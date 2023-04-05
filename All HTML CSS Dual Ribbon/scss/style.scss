@@ -1,0 +1,276 @@
+@import "compass/css3";
+
+// Change this number to scale the element
+$font-size: 40;
+
+$width: round(8 * $font-size);
+$height: round(2 * $font-size);
+$text-indent: round($font-size * 2.4px);
+
+$element-width: round($width * 1.93);
+$element-height: round($height * 2.9);
+$arrow-width: round(1.4 * $font-size);
+$drop-shadow-distance: round(.4 * $font-size);
+
+$cream: rgb(238, 236, 224);
+$cream-medium: rgb(202, 193, 166);
+$cream-dark: rgb(112, 107, 92);
+$blue: rgb(11, 35, 54);
+$dark-gray: #222;
+
+/**********************
+ * Begin setup mixins for use later
+ */
+/**
+ * Shade Mixin
+ * https://github.com/DarbyBrown/Shade
+ */
+@mixin shade($type, $color: #3498db, $depth: 20, $angle: 135deg, $long: false, $fade: false) {             
+  $angle: ($angle - 90);             
+  $x: 1.5 * cos($angle) + 0px;  
+  $y: 1.5 * sin($angle) + 0px;  
+  $darken: (lightness($color)/$depth)/2;
+  $opacify: 0; 
+  $shadow: ();  
+    
+  @if $long == true{              
+    $darken:0;
+  }  
+    
+  @if $fade == true {
+      $opacify: (opacity($color)/$depth) ;
+      @include translateZ(0); 
+    }
+  
+  @for $i from 1 through $depth {
+/* Making color solid
+    $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+*/
+    $shadow: $shadow, $i*$x $i*$y 0 $color;
+  }       
+  #{$type}-shadow: $shadow;
+}
+
+
+@mixin block-pseudo-element(){
+  content: ' ';
+  display: block;
+  position: absolute;
+}
+
+@mixin border-pseudo-element($element-bg: null, $width: 10px, $height: 10px){
+  @include block-pseudo-element;
+  width: 0;
+  height: 0;
+  @if $width == $height {
+    border: $width solid $element-bg;
+  } @else {
+    border: $width solid $element-bg;
+    border-top-width: $height;
+    border-bottom-width: $height;
+  }
+}
+
+@mixin bg-block-pseudo-element($element-bg: null, $width: 20px, $height: 20px){
+  @include block-pseudo-element;
+  width: $width;
+  height: $height;
+  background: $element-bg;
+}
+
+
+
+@mixin box-sizing($vars) {
+  -webkit-box-sizing: $vars;
+  -moz-box-sizing: $vars;
+  box-sizing: $vars;
+}
+
+@mixin transform-origin($vars){
+  -webkit-transform-origin: $vars;
+     -moz-transform-origin: $vars;
+      -ms-transform-origin: $vars;
+          transform-origin: $vars;
+}
+
+/***************************************
+ * Begin Actual Styles
+ */
+@mixin pointer-corner($direction: 'left', $color: $cream, $inner-arrow: false){
+  $opposite-direction: 'right';
+  $angle-modifier: 1;
+  @if ($direction == 'left'){
+    $opposite-direction: 'right';
+    $angle-modifier: -1;
+  }
+  position: absolute;
+  #{$direction}: 0;
+  @include box-sizing(border-box);
+  width: ($width + $arrow-width) * 1px;
+  height: $height * 1px;
+  z-index: 5;
+  overflow: hidden;
+
+  &:before {
+    @include bg-block-pseudo-element($color, $width  * 1px, 100%);
+    #{$direction}: $arrow_width * 1px;
+  }
+
+  &:after {
+    @include bg-block-pseudo-element($color, $height * 1px,  $height * 1px);
+    top: 50%;
+    margin-top: round(-.5 * $height * 1px);
+    #{$direction}: round(.45 * $font-size * 1px);
+    @include transform(rotate(45deg));
+    @if $color == $blue {
+      @include shade(box, $blue, round($drop-shadow-distance * .7), -45deg);
+    }
+  }
+  @if $inner-arrow {
+    div{
+      position: absolute;
+      top: 50%;
+      #{$direction}: round($font-size * 1px);
+      z-index: 1000;
+      width: $height * .55px;
+      height: $height * .55px;
+      margin-top: round($height * -.275px);
+      @include transform(rotate(-45deg * $angle-modifier));
+      background: $cream-medium;
+      &:after{
+        @include bg-block-pseudo-element($cream, round($height * .55px), round($height * .55px));
+        bottom: round($font-size * .4px);
+        #{$direction}: round($font-size * .4px);
+      }
+    }
+  }
+}
+
+@mixin angled-side($direction: 'right', $side: 'right'){
+  $opposite-direction: 'left';
+  $opposite-side: 'left';
+  $angle-modifier: 1;
+  $top-bot: 'bottom';
+  @if $direction == 'left' {
+    $opposite-direction: 'right';
+    $angle-modifier: -1;
+    $top-bot: 'bottom';
+  }
+  @if $side == 'left'{
+    $opposite-side: 'right';
+  }
+  position: absolute;
+  top: 0;
+  #{$side}: round(($height * -.5) + ($font-size * .2)) * 1px;
+  z-index: 5;
+  width: round($height * .5px);
+  height: round($height * 1px);
+  @include transform(skew(-15deg * $angle-modifier, 0));
+  @include transform-origin(#{$top-bot} #{$opposite-side});
+  background: $cream;
+  &:before {
+    @include bg-block-pseudo-element($cream-medium, round($height * .18px), round($height * 1.05px));
+    top: 0;
+    #{$side}: round($height * -.18px);
+    @include transform(skew(0, 40deg * $angle-modifier));
+    @include transform-origin(top #{$opposite-side});
+  }
+  &:after{
+    @include bg-block-pseudo-element($blue, round($height * .6px), $drop-shadow-distance * 1px);
+    bottom: $drop-shadow-distance * -1px;
+    #{$side}: round($height * -.185px);
+    @include transform(skew(45deg * $angle-modifier, 0));
+    @include transform-origin(bottom #{$opposite-side});
+  }
+}
+
+body {
+  font-family: 'Titillium Web';
+  background: #888;
+}
+
+h1{
+  position: relative;
+  width: $element-width  * 1px;
+  height: $element-height * 1px;
+  margin: .2em auto 0;
+  font-size: $font-size * 1px;
+  font-weight: 900;
+  line-height: round($height * .95px);
+  text-transform: uppercase;
+  color: $dark-gray;
+  @include shade(text, $cream-medium, round($font-size * .07), 135deg);
+  > div {
+    // wrapper div
+    .design,
+    .illustration {
+      // Generic design/illo outer
+      position: absolute;
+      width: ($width * 1px) + round(.6 * $font-size);
+      height: ($height + $drop-shadow-distance) * 1px;
+      
+      .text {
+        position: relative;
+        z-index: 100;
+      }
+    }
+    .design {
+      // Design wrapper
+      top: 0;
+      right: round($width * .85px);
+      .text{
+        padding-left: $text-indent;
+      }
+      .spare1{
+        @include pointer-corner($color: $blue);
+        bottom: 0;
+        z-index: 5;
+      }
+      .spare2{
+        @include pointer-corner($inner-arrow: true);
+        top: 0;
+        z-index: 10;
+      }
+      .spare3 {
+        @include angled-side;
+      }
+    }
+    .illustration{
+      // Illustration wrapper
+      bottom: 0;
+      right: 0;
+      text-align: right;
+      .text{
+        padding-right: $text-indent;
+      }
+      .spare1{
+        @include pointer-corner('right', $blue);
+        bottom: 0;
+        z-index: 5;
+      }
+      .spare2{
+        @include pointer-corner('right', $inner-arrow: true);
+        top: 0;
+        z-index: 10;
+      }
+      .spare3 {
+        @include angled-side('left', 'left');
+      }
+    }
+  }
+  .bar {
+    position: absolute;
+    top: $height + round(.15 * $font-size) * 1px;
+    right: round($width * .76px);
+    width: round($height * 1.1px);
+    height: round($height * 1.83px);
+    @include transform(rotate(39deg));
+    @include transform-origin(top right);
+    box-shadow: ($drop-shadow-distance * 1px) 0 0 $blue;
+    background: $cream-dark;
+  }
+}
+
+
+// Load Titillium Family from Google
+@font-face{font-family:'Titillium Web';font-style:normal;font-weight:200;src:local('Titillium WebThin'),local('TitilliumWeb-Thin'),url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr-E6O57bqL2WtN4biLacgeg.woff) format('woff')}@font-face{font-family:'Titillium Web';font-style:normal;font-weight:300;src:local('Titillium WebLight'),local('TitilliumWeb-Light'),url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr2-jEQ7ixT9mykCZ8BBatAk.woff) format('woff')}@font-face{font-family:'Titillium Web';font-style:normal;font-weight:400;src:local('Titillium Web'),local('TitilliumWeb-Regular'),url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/7XUFZ5tgS-tD6QamInJTcdASgiSiazNVaMZaV9DKExs.woff) format('woff')}@font-face{font-family:'Titillium Web';font-style:normal;font-weight:600;src:local('Titillium WebSemiBold'),local('TitilliumWeb-SemiBold'),url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr2gCgcskKIFo40ndTrcdCiA.woff) format('woff')}@font-face{font-family:'Titillium Web';font-style:normal;font-weight:700;src:local('Titillium WebBold'),local('TitilliumWeb-Bold'),url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr_fb5Q4ZioEX5fLPE_o-1oM.woff) format('woff')}@font-face{font-family:'Titillium Web';font-style:normal;font-weight:900;src:local('Titillium WebBlack'),local('TitilliumWeb-Black'),url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr1D_gR9ziCIb2bLb6UF6jDM.woff) format('woff')}@font-face{font-family:'Titillium Web';font-style:italic;font-weight:200;src:local('Titillium WebThin Italic'),local('TitilliumWeb-ThinItalic'),url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/RZunN20OBmkvrU7sA4GPPlDg4TuxMtsZ0wbII6ymf28.woff) format('woff')}@font-face{font-family:'Titillium Web';font-style:italic;font-weight:300;src:local('Titillium WebLight Italic'),local('TitilliumWeb-LightItalic'),url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/RZunN20OBmkvrU7sA4GPPnIu3i5KhThI9r_JXVTVbEo.woff) format('woff')}@font-face{font-family:'Titillium Web';font-style:italic;font-weight:400;src:local('Titillium WebItalic'),local('TitilliumWeb-Italic'),url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/r9OmwyQxrgzUAhaLET_KOx8qa_L3FxsPN3YZsknOt2E.woff) format('woff')}@font-face{font-family:'Titillium Web';font-style:italic;font-weight:600;src:local('Titillium WebSemiBold Italic'),local('TitilliumWeb-SemiBoldItalic'),url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/RZunN20OBmkvrU7sA4GPPgBjfk66F-VJc8CAlorrYAk.woff) format('woff')}@font-face{font-family:'Titillium Web';font-style:italic;font-weight:700;src:local('Titillium WebBold Italic'),local('TitilliumWeb-BoldItalic'),url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/RZunN20OBmkvrU7sA4GPPhR2GJzKq3w6YIk4L0L9zPA.woff) format('woff')}

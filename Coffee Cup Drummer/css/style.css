@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  overflow-y: scroll;
+}
+
+#paper {
+  height: 120px;
+  margin: 0;
+  background: #303535;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px white;
+  position: relative;
+  top: -80px;
+  background: #fff;
+}
+.wrap a {
+  margin: 0;
+  position: absolute;
+}
+.wrap a .round {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  box-shadow: 0 0 0 10px white;
+}
+.wrap figure img {
+  margin: 0;
+  -webkit-transition: top 0.4s ease-out;
+  -moz-transition: top 0.4s ease-out;
+  transition: top 0.4s ease-out;
+  position: absolute;
+  top: 200px;
+  left: 77px;
+}
+.wrap .two {
+  margin: 0;
+  -webkit-transition: top 0.4s ease-out;
+  -moz-transition: top 0.4s ease-out;
+  transition: top 0.4s ease-out;
+  opacity: 0.8;
+  top: 0;
+}
+.wrap .three {
+  margin: 0;
+  -webkit-transition: top 0.4s ease-out;
+  -moz-transition: top 0.4s ease-out;
+  transition: top 0.4s ease-out;
+  opacity: 0.8;
+  top: 0;
+}
+.wrap:hover .one {
+  opacity: 0.8;
+}
+.wrap a.one:hover {
+  opacity: 1;
+  z-index: 2;
+}
+.wrap:hover .two {
+  top: 300px;
+}
+.wrap a.two:hover {
+  opacity: 1;
+  z-index: 2;
+}
+.wrap:hover .three {
+  top: 150px;
+}
+.wrap a.three:hover {
+  opacity: 1;
+  z-index: 2;
+}
+.wrap:hover figure img {
+  top: 500px;
+}

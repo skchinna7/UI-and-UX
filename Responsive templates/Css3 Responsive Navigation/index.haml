@@ -1,0 +1,49 @@
+%header.masthead
+  .brand-container
+    %a{:href => "#"}
+      %span.brand-initials Es
+      %span.brand-name Elemental Shift
+  %nav
+    .nav-container
+      %div
+        %input#slider1{:name => "slider1", :type => "checkbox"}/
+        %label.slide.has-child{:for => "slider1"}
+          %span.element Bg
+          %span.name Blog
+        .child-menu
+          %a{:href => "#"} Recent
+          %a{:href => "#"} Archives
+          %a{:href => "#"} Categories
+      %div
+        %a.slide{:href => "#"}
+          %span.element Po
+          %span.name Portfolio
+      %div
+        %input#slider2{:name => "slider2", :type => "checkbox"}/
+        %label.slide.has-child{:for => "slider2"}
+          %span.element Xp
+          %span.name Laboratory
+        .child-menu
+          %a{:href => "#"} PHP
+          %a{:href => "#"} Javascript
+          %a{:href => "#"} Css
+          %a{:href => "#"} Ruby
+          %a{:href => "#"} Python
+          %a{:href => "#"} Design
+      %div
+        %a.slide{:href => "#"}
+          %span.element Ab
+          %span.name About
+      %div
+        %a.slide{:href => "#"}
+          %span.element C
+          %span.name Contact
+  .social-container
+    %span
+      %a.social-roll.github{:href => "#"}
+    %span
+      %a.social-roll.twitter{:href => "#"}
+    %span
+      %a.social-roll.linkedin{:href => "#"}
+    %span
+      %a.social-roll.rss{:href => "#"}

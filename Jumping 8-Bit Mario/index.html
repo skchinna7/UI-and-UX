@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="noindex">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/twilight.css">
+	<link rel="stylesheet" type="text/css" href="css/editor.css">
+	<script src="js/console_runner.js"></script>
+	<script src="js/events_runner.js"></script>
+	<script src="js/css_live_reload.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/everypage.js"></script>
+	<script src="js/commonLibs.js"></script>
+	<script src="js/codemirror.js"></script>
+	<script src="js/analytics.js"></script>
+</head>
+<body>
+	<script src="js/jquery.min.js"></script>
+	<div class="wrapper move">
+		<section class="static-mario">
+			<!-- row one -->
+			<div class="square">&nbsp;</div>
+			<div class="square">&nbsp;</div>
+			<div class="square">&nbsp;</div>
+			<div class="square">&nbsp;</div>
+			<div class="square">&nbsp;</div>
+			<div class="square red">&nbsp;</div>
+			<div class="square red">&nbsp;</div>
+			<div class="square red">&nbsp;</div>		
+			<div class="square red">&nbsp;</div>
+			<div class="square red">&nbsp;</div>
+			<div class="square">&nbsp;</div>
+			<div class="square">&nbsp;</div>
+			<div class="square">&nbsp;</div>
+			<div class="square">&nbsp;</div>	
+			<div class="square">&nbsp;</div>
+			<div class="square">&nbsp;</div>
+
+			<!-- row two -->
+			<div class="square">&nbsp;</div>
+			<div class="square">&nbsp;</div>
+			<div class="square">&nbsp;</div>						
+			<div class="square">&nbsp;</div>			
+		     <div class="square red">&nbsp;</div>
+		     <div class="square red">&nbsp;</div>
+		     <div class="square red">&nbsp;</div>
+		     <div class="square red">&nbsp;</div>
+		     <div class="square red">&nbsp;</div>
+		     <div class="square red">&nbsp;</div>
+		     <div class="square red">&nbsp;</div>
+		     <div class="square red">&nbsp;</div>
+		     <div class="square red">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+
+		     <!-- row three -->
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+
+		     <!-- row four -->
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+
+		     <!-- row five -->
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+
+		     <!-- row six -->
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square brown">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+
+		     <!-- row seven -->
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square skin">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+		     <div class="square">&nbsp;</div>
+
+     <!-- row eight -->
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <!-- row nine -->
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <!-- row ten -->
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <!-- row eleven -->
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <!-- row twelve -->
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <!-- row thirteen -->
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square skin">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <!-- row fourteen -->
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square red">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <!-- row fifthteen -->
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <!-- row sixteen -->
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square brown">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+   </section>
+   <section class="no-jump">
+     <!-- row one -->
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+     <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <!-- row two -->
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <!-- row three -->
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <!-- row four -->
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <!-- row five -->
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <!-- row six -->
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <!-- row seven -->
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <!-- row eight -->
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <!-- row nine -->
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <!-- row ten -->
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <!-- row eleven -->
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <!-- row twelve -->
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <!-- row thirteen -->
+    <div class="square">&nbsp;</div>
+    <div class="square skin">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <!-- row fourteen -->
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <!-- row fifthteen -->
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <!-- row sixteen -->
+    <div class="square">&nbsp;</div>
+    <div class="square brown">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square red">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+    <div class="square">&nbsp;</div>
+  </section>
+  </div>
+  <button>Jump</button>
+  <script src="js/stopExecutionOnTimeout.js"></script>
+  <script>
+  	$(docment).ready(function () {
+  		$('button').click(function () {
+  			$('.static-mario').addClass('mario');
+  			$('.no-jump').addClass('mario-jump');
+  			$('.wrapper move').addClass('move');
+  			setTimeout(function () {
+  				$('.static-mario').removeClass('mario');
+  				$('.no-jump').removeClass('mario-jump');
+  				$('.wrapper').removeClass('move');
+  			}, 1000);
+  		})();
+  	})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+.logo {
+  height: 150px;
+  margin: 10px;
+  width: 150px;
+}
+.logo path {
+  stroke: rgba(0,0,0,0.1);
+  stroke-width: 1;
+}
+.logo .top {
+  fill-opacity: 0.9;
+}
+.logo.blue .top {
+  fill: #2980b9;
+}
+.logo.blue .left,
+.logo.blue .right {
+  fill: #3498db;
+}
+.logo.red .top {
+  fill: #c0392b;
+}
+.logo.red .left,
+.logo.red .right {
+  fill: #e74c3c;
+}
+.logo.yellow .top {
+  fill: #f39c12;
+}
+.logo.yellow .left,
+.logo.yellow .right {
+  fill: #f1c40f;
+}
+.logo.green .top {
+  fill: #27ae60;
+}
+.logo.green .left,
+.logo.green .right {
+  fill: #2ecc71;
+}
+.logo.purple .top {
+  fill: #8e44ad;
+}
+.logo.purple .left,
+.logo.purple .right {
+  fill: #9b59b6;
+}
+.logo.light-grey .top {
+  fill: #bdc3c7;
+}
+.logo.light-grey .left,
+.logo.light-grey .right {
+  fill: #7f8c8d;
+}
+.logo.orange .top {
+  fill: #d35400;
+}
+.logo.orange .left,
+.logo.orange .right {
+  fill: #e67e22;
+}
+.logo.dark-grey .top {
+  fill: #2c3e50;
+}
+.logo.dark-grey .left,
+.logo.dark-grey .right {
+  fill: #34495e;
+}

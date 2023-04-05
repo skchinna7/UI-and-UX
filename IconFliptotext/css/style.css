@@ -1,0 +1,39 @@
+#dot .icon-group {
+  color: #c85;
+  font-family: "FontAwesome";
+  font-size: 80px;
+  left: 57px;
+  opacity: 1;
+  position: absolute;
+  top: 58px;
+  -webkit-transition: all 500ms;
+}
+#dot .flip-text {
+  color: #666;
+  font-size: 24px;
+  left: 6px;
+  opacity: 0;
+  position: absolute;
+  top: 73px;
+  -webkit-transform: rotateY(-180deg);
+  -webkit-transition: all 500ms;
+}
+#dot:hover .icon-group {
+  opacity: 0;
+  -webkit-transform: rotateY(180deg);
+}
+#dot:hover .flip-text {
+  opacity: 1;
+  -webkit-transform: rotateY(0);
+}
+.hoverDot {
+  border: 2px dashed #666;
+  background-color: #fff;
+  border-radius: 50%;
+  float: left;
+  height: 200px;
+  width: 200px;
+  margin: 25px 23px;
+  position: relative;
+  text-align: center;
+}

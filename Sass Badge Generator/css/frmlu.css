@@ -1,0 +1,190 @@
+$white : #ecf0f1;
+$gray: darken($white, 30);
+
+$midnight: #2c3e50;
+
+$red: #e74c3c;
+
+$peach: #ff5350;
+
+$blue: #347EED;
+$blue-dark: desaturate(darken($blue, 10), 10);
+$blue-light: lighten($blue, 10);
+
+$yellow: #FFEF35;
+$yellow-light: lighten($yellow, 15);
+
+$orange: #f39c12;
+
+$green: #31F042;
+
+$emerald: #2ecc71;
+
+$turqoise: #1abc9c;
+
+$fb-blue: #3B5998;
+$twitter-blue: #4099FF;
+
+/*FONTS*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+@import url(http://weloveiconfonts.com/api/?family=entypo|zocial);
+//ANIMATIONS
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}.animated.hinge{-webkit-animation-duration:2s;-moz-animation-duration:2s;-ms-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;}@-webkit-keyframes flash {
+	0%, 50%, 100% {opacity: 1;}	25%, 75% {opacity: 0;}
+}
+
+@include keyframes(flash) {
+	0%, 50%, 100% {opacity: 1;}	
+	25%, 75% {opacity: 0;}
+}
+
+
+.flash {
+	-webkit-animation-name: flash;
+	-moz-animation-name: flash;
+	-o-animation-name: flash;
+	animation-name: flash;
+}
+@include keyframes(tada) {
+	0% {-webkit-transform: scale(1);}	
+	10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
+	30%, 50%, 70%, 90% {-webkit-transform: scale(1.1) rotate(3deg);}
+	40%, 60%, 80% {-webkit-transform: scale(1.1) rotate(-3deg);}
+	100% {-webkit-transform: scale(1) rotate(0);}
+}
+
+.tada {
+	animation-name: tada;
+}
+
+//DEMO STYLES
+
+body {
+  background: $white;
+}
+
+.demo {
+  padding: 1em;
+}
+.demo-desc {
+  background: $white;
+  margin-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 2em;
+  
+  line-height: 1.55em;
+  font-family: sans-serif;
+  strong {
+    font-weight: bold;
+  }
+  h1 {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 2em;
+    line-height: 1.45em;
+    margin-bottom: .5em;
+  }
+  ul li {
+    list-style: circle inside;
+  }
+  pre {
+   margin-bottom: 2em;
+   display: inline-block;
+  }
+
+  p code, li code {
+    font-family: lucida sans, monospace;
+    background: lightgray;
+    font-size: .9em;
+  }  
+  
+  h2 {
+    font-family: sans-serif;
+    font-size: 1.4em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $blue;
+  }
+
+}
+
+
+em{font-style: italic}
+
+pre{
+  background: darken($white, 10);
+  padding: 1em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  border-radius: 2px;
+  font-size: 14px;
+  width: 100%;
+  font-family: lucida console, monospaced;
+}
+ 
+@mixin animation ($animations) {
+     -moz-animation: $animations;
+       -o-animation: $animations;
+  -webkit-animation: $animations;
+          animation: $animations;
+}
+ 
+@mixin animation-fill-mode ($mode) {
+     -moz-animation-fill-mode: $mode;
+       -o-animation-fill-mode: $mode;
+  -webkit-animation-fill-mode: $mode;
+          animation-fill-mode: $mode;
+}
+
+@mixin animation-delay ($delay) {
+    -moz-animation-delay: $delay;
+    -o-animation-delay: $delay;
+    -webkit-animation-delay: $delay;
+    animation-delay: $delay;
+
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  @include box-sizing(border-box);
+}
+
+.demo-demo {
+  background: $blue;
+  h1{
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    opacity: .3;
+    font-size: 3em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+}

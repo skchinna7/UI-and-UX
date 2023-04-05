@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS3 ribbons with Unicode icons</title>
+    
+    
+    
+    
+        <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+
+body {
+  font: 14px Cabin;
+  margin: 30px 40px;
+}
+
+aside {
+  background: #a6b7c5;
+  box-shadow: inset 1px 1px 8px rgba(0,0,0,0.2);
+  min-width: 170px;
+  padding: 12px 0;
+  width: 20%;
+}
+aside h1 {
+  background-color: #415e77;
+  background-image: linear-gradient(transparent, rgba(0,0,0,0.2));
+  border-radius: 3px 0 0 3px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 1.2em;
+  margin: 0 0 24px 12px;
+  padding: 4px 0 4px 12px;
+  position: relative;
+  width: 100%;
+}
+aside h1:after {
+  border-color: #263746 transparent transparent #263746;
+  border-style: solid;
+  border-width: 6px;
+  bottom: -12px;
+  content: "";
+  position: absolute;
+  right: 0;
+}
+aside h1:before {
+  color: #fff;
+  content: "";
+  font: 26px sans-serif;
+  position: absolute;
+  right: 12px;
+  top: -2px;
+}
+aside h1.blog:before {
+  content: "✎";
+}
+aside h1.audio:before {
+  content: "♫";
+}
+aside h1.weather:before {
+  content: "☂";
+}
+aside h1.pirates:before {
+  content: "☠";
+}
+aside h1.contact:before {
+  content: "✉";
+}
+    </style>
+
+    
+        <script src="js/prefixfree.min.js"></script>
+
+    
+  </head>
+
+  <body>
+
+    <aside>
+  <h1 class="blog">Blog</h1>
+  <h1 class="weather">Weather</h1>
+  <h1 class="pirates">Pirates</h1>
+  <h1 class="contact">Contact</h1>
+</aside>
+    
+    
+    
+    
+    
+  </body>
+</html>

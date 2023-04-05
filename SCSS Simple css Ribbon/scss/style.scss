@@ -1,0 +1,53 @@
+@import "compass/css3";
+
+$rmargin : 10px !default;
+$rcolor  : darken(red,10%) !default;
+
+body {
+  background : #666;
+}
+
+.box {
+  width      : 75%;
+  padding    : 25px $rmargin;
+	margin     : 0 auto;
+	background : #eee;
+}
+
+h1 {
+	clear       : both;
+	position    : relative;
+	color       : #fff;
+	background  : $rcolor;
+  font-size   : 2em;
+	margin      : 0 (-$rmargin*2) 20px (-$rmargin*2) ;
+	padding     : 0.5em $rmargin*2;
+	text-shadow : 0 -1px darken($rcolor,10%), 0 1px darken($rcolor,20%);
+  
+  @include single-box-shadow(rgba(0,0,0,0.1),0,2px,0)
+}
+ 
+h1:before,
+h1:after {
+	content  : " ";
+	display  : block;
+	width    : 0;
+	height   : 0;
+	position : absolute;
+	bottom   : -$rmargin;
+	left     : 0;
+  z-index  : -1;
+  position      : absolute;
+	border-top    : $rmargin solid darken($rcolor,15%); 
+	border-left   : $rmargin solid transparent;   
+  background    : transparent;
+}
+
+h1:after {
+  right : 0;
+  left  : auto;
+	border-top    : $rmargin solid darken($rcolor,15%);
+	border-right  : $rmargin solid transparent; 
+}
+
+

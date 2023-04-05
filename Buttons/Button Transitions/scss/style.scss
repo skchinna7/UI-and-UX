@@ -1,0 +1,197 @@
+@import "compass/css3";
+
+$blue: #2E9FFF;
+$white: #FFFFFF;
+$bg: #1a1a1a;
+$oswald: 'Oswald', sans-serif;
+
+body {
+  background: $bg;
+}
+
+.wrap-btns {
+  width: 80%;
+  margin: 20px auto 50px auto;
+}
+
+h3 {
+  font-family: $oswald;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.btn {
+   @include border-radius(0);
+   @include transition(all .2s linear);
+   padding-top: 0;
+   padding-bottom: 0;
+   width: 250px;
+   margin: 0 10px;
+  
+   font: 300 24px/62px $oswald;
+   letter-spacing: .15em;
+   text-transform: uppercase;
+  
+   border: 3px solid $blue;
+   background: $blue;
+   color: darken($white, 2%);
+   
+    &.style1 {
+     position: relative;
+     z-index:1;
+     &:before {
+       position: absolute;
+       content: '';
+       top: 50%;
+       left: 50%;
+       height: 0;
+       width: 0;
+       border-radius: 50%;
+       background: $bg;
+       z-index: -1;
+       @include transform(translate(-50%, -50%));
+       @include transition(width .3s, height .2s ease-in-out, border-radius .1s linear .05s);
+	   }
+      &:hover:before {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+		 }
+   } /* .style1 */
+  
+   &.style2 {
+     @include transition(background .15s linear, border-radius .25s ease-out, letter-spacing .2 ease-in, color .2s);
+     &:hover,
+     &:active {
+       border-radius: 34px;
+       background: transparent;
+       letter-spacing: .18em;
+     }
+   } /* .style2 */
+  
+   &.style3 {
+     @include transition(color .3s);
+     position: relative;
+     background: transparent;
+     z-index: 1;
+     &:after {
+       position: absolute;
+       content: '';
+       border-style: solid;
+       border-color: $bg;
+       border-width: 0;
+       width: 100%;
+       height: 100%;
+       top: 0;
+       left: 0;
+       padding: 2px;
+       z-index: -1;
+       background: $blue;
+       @include transition(transform .2s, opacity .2s, border-width .2s);
+     }
+     &:hover:after {
+       /* @include transform(scale(0.96, 0.85)); */
+       border-width: 4px;
+     }
+   } /* .style3 */
+  
+   &:hover,
+   &:active {
+      color: $white;
+  }
+}
+
+
+/* CIRCLE BUTTON */
+
+#circle-wrap {
+  width: 102px;
+  height: 102px;
+  margin: 0 auto 50px;
+  text-align: center;
+  top: 0;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  @include backface-visibility(hidden);
+  @include transform(translate(-2px,20px) translateZ(0) translate3d(0,0,0));
+  @include transform-style(preserve-3d);
+  a {
+    text-decoration: none!important;
+  }
+}
+
+.border-inactive {
+	height: 100px;
+	width: 100px;
+  position: absolute;
+  opacity: .3;
+  border: 2px solid #fff;
+  @include border-radius(50%);
+  @include transition(all 700ms cubic-bezier(0.23,1,.32,1) .08s);
+  @include transform-style(preserve-3d);
+
+	a:hover & {
+    opacity: 0;
+    border: 2px solid #fff;
+    @include transform(scale(1.3) translateZ(0) translate3d(0,0,0));
+    @include transition(all 400ms cubic-bezier(0.23,1,.32,1));
+	}
+}
+
+.border-active {
+  height: 112px;
+  width: 112px;
+  margin: -57px 0 0 -57px;
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  border: 2px solid #4fe7bc;
+  @include border-radius(50%);
+  @include transition(all 400ms cubic-bezier(0.23,1,.32,1));
+  @include transform-style(preserve-3d);
+  @include transform(scale(.8) translateZ(0) translate3d(0,0,0));
+  a:hover & {
+    opacity: 1;
+    @include transform(scale(1) translateZ(0) translate3d(0,0,0));
+    @include transition(all 700ms cubic-bezier(0.23,1,.32,1) .03s);
+  }
+}
+
+.letter {
+  font: 60px/45px $oswald;
+  color: $white;
+  opacity: .4;
+  position: relative;
+  @include transform(translate(1px,5px) translateZ(0) translate3d(0,0,0));
+  @include transform-style(preserve-3d);
+  @include transition(all 500ms cubic-bezier(0.23,1,.32,1));
+  a:hover & {
+    @include transform(translate(1px,1px) translateZ(0) translate3d(0,0,0));
+    @include transition(all 700ms cubic-bezier(0.23,1,.32,1));
+    opacity: 1;
+  }
+}
+
+.underline {
+  height: 7px;
+width: 31px;
+  @include transform(translate(1px,30px) translateZ(0) translate3d(0,0,0));
+  @include transform-style(preserve-3d);
+  @include transition(all 500ms cubic-bezier(0.23,1,.32,1));
+
+  position: relative;
+  margin: 0 auto;
+background: #fff;
+opacity: .4;
+
+  a:hover & {
+    @include transform(translate(1px,35px) translateZ(0) translate3d(0,0,0));
+    @include transition(all 700ms cubic-bezier(0.23,1,.32,1));
+    opacity: 1;
+  
+  }
+}

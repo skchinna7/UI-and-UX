@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hover and Click Trigger for Circular Elements with jQuery</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Hover and Click Trigger for Circular Elements with jQuery - jQuery plugin for hovering and clicking on circles" />
+        <meta name="keywords" content="jquery, hover, plugin, click, trigger, event, custom, area, web development, circle, circular shape, css3" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Kelly+Slab' rel='stylesheet' type='text/css' />
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="css/noscript.css" />
+		</noscript>
+		<script type="text/javascript" src="js/modernizr.custom.72835.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="wrapper">
+				<!-- If browser does not support border radius, show this message -->
+				<p class="message">Your browser does not support the border-radius property!</p>
+				<div class="section">
+					<div class="normal-trigger-area">
+						<a href="#" id="circle" class="ec-circle">
+							<h3>Hovered</h3>
+						</a>
+					</div>
+					<div class="content">
+						<h1>Hover and Click Trigger for Circular Elements <span>with jQuery</span></h1>
+						<p>On elements with a border radius of 50% (which makes an element appear as a circle), the hover event gets triggered on mousing over the element itself which is its rectangular shape (see dashed outline).</p>
+						<p>We'll apply a hover class and be able to click it only when entering the circle itself.</p>
+						<p><strong>Hover over the circle to see the effect.</strong></p>
+						<p><a href="http://tympanus.net/codrops/2011/11/22/hover-and-click-trigger-circular-elements/">Read the article here</a></p>
+					</div>
+				</div>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.circlemouse.js"></script>
+        <script type="text/javascript">
+            $(function() {
+				
+				$('#circle').circlemouse({
+					onMouseEnter	: function( el ) {
+					
+						el.addClass('ec-circle-hover');
+					
+					},
+					onMouseLeave	: function( el ) {
+						
+						el.removeClass('ec-circle-hover');
+						
+					},
+					onClick			: function( el ) {
+						
+						alert('clicked');
+						
+					}
+				});
+				
+			});
+        </script>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+/*
+change the background color of the .ribbon class
+or
+change the font size of the .content div
+or
+Resize the window to see how it behaves
+*/

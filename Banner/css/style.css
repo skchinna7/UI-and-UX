@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bnr, .bnr span {
+    display: block;
+    height: 3em;
+    line-height: 3em;
+    width: 15em;
+}
+
+.bnr {
+    background: #4FF;
+    color: #255;
+    font-family: sans-serif;
+    font-size: 24px; /* Change size here and the whole banner scales up or down. */
+    font-weight: bold;
+    margin: 1.5em 3em 2em;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,.65);
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.bnr span {
+    position: absolute;
+    top: .75em;
+}
+
+.bnr b, .bnr i {
+    border-top: 1.5em solid #4DD;
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+
+.bnr b {
+    border-left: 1.5em solid transparent;
+    left: -1.5em;
+}
+
+.bnr i {
+    border-right: 1.5em solid transparent;
+    right: -1.5em;
+}
+
+.bnr b + b,
+.bnr i + i {
+    border-bottom: 1.5em solid #4DD;
+    border-top: none;
+    top: 1.5em;
+}
+
+.bnr b:after, .bnr b + b:after,
+.bnr i:after, .bnr i + i:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: .75em;
+}
+
+.bnr b:after,
+.bnr i:after {
+    background: #4DD;
+    height: .75em;
+    width: .75em;
+}
+
+.bnr b + b:after,
+.bnr i + i:after {
+    border-top: .75em solid #488;
+    height:0;
+    width:0;
+}
+
+.bnr b + b:after {
+    border-left: .75em solid transparent;
+}
+
+.bnr i + i:after {
+    border-right: .75em solid transparent;
+    left: -.75em;
+}
+
+/*
+Find CSS shapes here: http://css-tricks.com/examples/ShapesOfCSS/
+*/

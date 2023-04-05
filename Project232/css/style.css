@@ -1,0 +1,113 @@
+body {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+#page-wrap {
+    position: relative;
+    top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    width: 470px;
+    padding: 10px 10px 0px 10px;
+    border-radius: 2px 2px 2px 2px;
+}
+#profile-stuff {
+    height: auto;
+    width: 470px;
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.498039) 0px 6px 16px -9px;
+}
+#profile-top {
+    position: relative;
+    padding: 10px 10px 0px 10px;
+    height: 100px;
+    width: 450px;
+    z-index: 150;
+}
+#profile-picture-wrap {
+    float: left;
+    padding: 2px 2px 2px 2px;
+    height: 96px;
+    width: 96px;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: rgba(0, 0, 0, 0.498039) 0px 6px 16px -9px;
+    background-color: #fff;
+}
+#profile-picture {
+    height: 96px;
+    width: 96px;
+    border-radius: 2px 2px 2px 2px;
+    overflow: hidden;
+}
+#profile-picture img {
+    height: auto;
+    min-height: 96px;
+    width: 96px;
+}
+#profile-top-right {
+    float: left;
+    margin: 0px 0px 0px 10px;
+    height: 30px;
+    width: 340px;
+}
+#user-name {
+    float: left;
+    height: 30px;
+    width: 200px;
+}
+#user-name p {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-family: calibri;
+    font-weight: bold;
+    font-size: 24px;
+    color: #444;
+    line-height: 30px;
+}
+#cover-wrap {
+    margin-top: -65px;
+    height: 250px;
+    width: 470px;
+    background: url('https://sphotos-a.xx.fbcdn.net/hphotos-ash3/540880_10200267172913759_929968936_n.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#fact-wrap {
+    padding: 5px 0px 30px 0px;
+    height: auto;
+    width: 470px;
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.54902) 100%);
+}
+.user-fact {
+    margin: 0px 0px 0px 120px;
+    height: auto;
+    width: auo;
+}
+.user-fact p {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-family: calibri;
+    font-size: 16px;
+    color: #fff;
+}
+#profile-stuff-bottom {
+    padding: 10px 10px 10px 10px;
+    height: auto;
+    width: 450px;
+}
+#about {
+    margin: 0px 0px 0px 0px;
+    height: auto;
+    width: auto;
+}
+#about p {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-family: calibri;
+    font-size: 16px;
+    color: #444;
+}

@@ -1,0 +1,111 @@
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
+
+*{margin:0px;padding:0px;}
+
+html {
+  	width:100%;
+		height:100%;
+		background: -moz-radial-gradient(center, ellipse cover,  #f9f9f9 26%, #bfbfbf 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(26%,#f9f9f9), color-stop(100%,#bfbfbf)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #f9f9f9 26%,#bfbfbf 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #f9f9f9 26%,#bfbfbf 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #f9f9f9 26%,#bfbfbf 100%); /* IE10+ */
+background: radial-gradient(center, ellipse cover,  #f9f9f9 26%,#bfbfbf 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#bfbfbf',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+	}
+	
+.tagRibbon {
+		width:308px;
+		padding: 6px;
+		margin:12px auto;
+		position:relative;
+		color: #ffffff;
+		font: 28px arial, sans-serif;
+		text-align: center;
+		letter-spacing:0.1em;
+		text-shadow: 0px -2px 0px rgba(0,0,0,0.3);
+		box-shadow: inset 0px 1px 0px rgba(255,255,255,.3),
+					inset 0px 0px 20px rgba(0,0,0,0.1),
+					0px 1px 1px rgba(0,0,0,0.4);
+		background: #003f70;
+  background: -moz-linear-gradient(left,  #003f70 0%, #004f91 50%, #003f70 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#003f70), color-stop(50%,#004f91), color-stop(100%,#003f70));
+  background: -webkit-linear-gradient(left,  #003f70 0%,#004f91 50%,#003f70 100%);
+  background: -o-linear-gradient(left,  #003f70 0%,#004f91 50%,#003f70 100%);
+  background: -ms-linear-gradient(left,  #003f70 0%,#004f91 50%,#003f70 100%);
+  background: linear-gradient(to right,  #003f70 0%,#004f91 50%,#003f70 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003f70', endColorstr='#003f70',GradientType=1 );
+
+	}
+	
+.tagRibbon:before, .tagRibbon:after {
+		content: "";
+		width:.2em;
+		bottom:-.5em;
+		position:absolute;
+		display:block;
+		border: .9em solid #013e73;
+		box-shadow:0px 1px 0px rgba(0,0,0,0.4);
+		z-index:-2;
+	}
+	
+.tagRibbon:before {
+		left:-1.35em;
+		border-right-width: .75em;
+		border-left-color:transparent;
+	}
+	
+.tagRibbon:after {
+		right:-1.35em;
+		border-left-width: .75em;
+		border-right-color:transparent;
+	}
+
+
+.ribbonWrapper:before, .ribbonWrapper:after {
+		content:"";
+		bottom:-.5em;
+		position:absolute;
+		display:block;
+		border-style:solid;
+		border-color: #012a4d transparent transparent transparent;
+		z-index:-1;
+	}
+	
+.ribbonWrapper:before {
+	  left: 0;
+	  border-width: .5em 0 0 .5em;
+	}
+	
+.ribbonWrapper:after {
+	  right: 0;
+	  border-width: .5em .5em 0 0;
+	}
+
+.ribbonAnts{
+  border-top:dashed 1px #0565b8;
+  border-bottom:dashed 1px #0565b8;
+}
+
+
+.ribbonAnts:before, .ribbonAnts:after {
+		content:"";
+		position:absolute;
+		display:block;
+		z-index:-1;
+    width:40px;
+    height:41px;
+    border-top:dashed 1px #0565b8;
+    border-bottom:dashed 1px #0565b8;
+	}
+
+.ribbonAnts:before{
+    left:-30px;
+		bottom:-10px;
+}
+
+.ribbonAnts:after{
+    right:-30px;
+		bottom:-10px;
+}
+  

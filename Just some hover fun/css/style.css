@@ -1,0 +1,78 @@
+body
+{
+  background:black;
+}
+
+#canvas
+{
+  width:800px;height:500px;
+  overflow:hidden;
+  position:absolute;top:0;left:200px;
+}
+
+#trigger
+{
+  text-align:center;
+  color:white;
+  top:0;left:0;
+  font-size:100px;
+  height:100px;
+  width:800px;
+  transition:all 2s;
+  -webkit-transition:all 1s;
+  -moz-transition:all 1s;
+}
+
+#one
+{
+  width:100px;
+  position:relative;
+  top: 0; left:-800px ;
+  border:0; height:1px;
+  opacity:0;
+  transition-property: left, width;
+  transition-duration: 1s,0.5s
+    transition-delay: 0s,0s;
+  -webkit-transition-property: left, width;
+  -webkit-transition-duration: 1s,0.5s;
+  -webkit-transition-delay: 0s,0s;
+  -moz-transition-property: left, width;
+  -moz-transition-duration: 1s,0.5s;
+  -moz-transition-delay: 0s,0s;
+}
+
+#trigger:hover
+{
+  cursor:pointer;
+  color:transparent; 
+  text-shadow:0 0 10px white;
+}
+
+#trigger:hover ~ #one
+{
+  border:solid 1px white;
+  opacity:1; left:800px;
+  width:100px;
+}
+
+#two
+{
+  border:solid 1px #8A8889;   
+  position:absolute;
+  top:100px;left:0;width:800px;z-index:-1;
+  transition:all 1s;
+  -webkit-transition:all 1s;
+  -moz-transition:all 1s;
+  opacity:0.3;
+}
+
+#trigger:hover ~ #two
+{
+  border:solid 1px #5C5C5C;
+  width:500px; 
+  left:150px;
+  -webkit-box-shadow: 0 0 10px 2px #5C5C5C;
+  -moz-box-shadow: 0 0 10px 2px #5C5C5C;
+  box-shadow: 0 0 10px  2px #5C5C5C;
+  opacity:1;
+}

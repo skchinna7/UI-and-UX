@@ -1,0 +1,10 @@
+- var title = "Yay! Jelly text".split('');
+- var subtitle = "move your mouse around".split('');
+.container
+  .sentence
+    h1
+      each letter in title
+        span !{letter}
+    h2
+      each letter in subtitle
+        span !{letter}

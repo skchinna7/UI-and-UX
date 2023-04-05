@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mirror Effect | Demo 2 | Codrops</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Anton|Montserrat:700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/mirror.css" />
+		<script>document.documentElement.className = 'js';</script>
+	</head>
+	<body class="demo-2 loading">
+		<main>
+			<section class="content content--full">
+				<header class="codrops-header">
+					<h1 class="codrops-header__title">Mirror Effect</h1>
+					<nav class="demos">
+						<a class="demo" href="index.html">Demo 1</a>
+						<a class="demo demo--current" href="index2.html">Demo 2</a>
+						<a class="demo" href="index3.html">Demo 3</a>
+					</nav>
+				</header>
+				<h2 class="page-title">Dreams in Colors</h2>
+				<div class="slideshow">
+					<div class="slide">
+						<div class="mirror" data-layout="vertical">
+							<div class="mirror__side mirror__side--one">
+								<img class="mirror__img" src="img/wave1.svg" alt="Some image" />
+							</div>
+							<div class="mirror__side mirror__side--two">
+								<img class="mirror__img" src="img/wave1.svg" alt="Some image" />
+							</div>
+						</div>
+						<h2 class="slide__title">Clouds</h2>
+					</div>
+					<div class="slide">
+						<div class="mirror" data-layout="vertical">
+							<div class="mirror__side mirror__side--one">
+								<img class="mirror__img" src="img/wave2.svg" alt="Some image" />
+							</div>
+							<div class="mirror__side mirror__side--two">
+								<img class="mirror__img" src="img/wave2.svg" alt="Some image" />
+							</div>
+						</div>
+						<h2 class="slide__title">Unfolding</h2>
+					</div>
+					<div class="slide">
+						<div class="mirror" data-layout="vertical">
+							<div class="mirror__side mirror__side--one">
+								<img class="mirror__img" src="img/wave3.svg" alt="Some image" />
+							</div>
+							<div class="mirror__side mirror__side--two">
+								<img class="mirror__img" src="img/wave3.svg" alt="Some image" />
+							</div>
+						</div>
+						<h2 class="slide__title">Sleeping</h2>
+					</div>
+					<div class="slide">
+						<div class="mirror" data-layout="vertical">
+							<div class="mirror__side mirror__side--one">
+								<img class="mirror__img" src="img/wave4.svg" alt="Some image" />
+							</div>
+							<div class="mirror__side mirror__side--two">
+								<img class="mirror__img" src="img/wave4.svg" alt="Some image" />
+							</div>
+						</div>
+						<h2 class="slide__title">Horizons</h2>
+					</div>	
+					<nav class="slideshow__nav slideshow__nav--nopad">
+						<button class="btn btn--line btn--nav">Clouds</button>
+						<button class="btn btn--line btn--nav">Unfolding</button>
+						<button class="btn btn--line btn--nav">Sleeping</button>
+						<button class="btn btn--line btn--nav">Horizons</button>
+					</nav>
+				</div><!-- /slideshow -->
+				<button class="btn btn--play"><svg class="icon icon--play"><use xlink:href="#icon-play"></use></svg></button>
+			</section>
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/mirrorFx.js"></script>
+		<script src="js/slideshow.js"></script>
+		<script>
+		(function() {
+
+			function init() {
+				new Slideshow(document.querySelector('.slideshow'), {
+					titleAnimation: 'horizontal'
+				});
+			}
+			
+			// Fake loading time..
+			var startTime = new Date().getTime();
+			imagesLoaded(document.querySelector('main'), function() {
+				var elapsed = new Date().getTime() - startTime,
+					initFn = function() {
+						document.body.classList.remove('loading');
+						setTimeout(init, 50);
+					};
+
+				if( elapsed > 2000) {
+					initFn();
+				}
+				else {
+					setTimeout(initFn, 1000);
+				}
+			});
+
+		})();
+		</script>
+	</body>
+</html>

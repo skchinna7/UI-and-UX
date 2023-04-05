@@ -1,0 +1,57 @@
+@import "compass/css3";
+
+$ribbon-background-color: #d7e503;
+$ribbon-width: 15em;
+$ribbon-ends-width: 1.5em;
+$ribbon-ends-border-width: 0.9em;
+
+@mixin ribbon(){
+  width: $ribbon-width;
+  position: relative;
+  background: $ribbon-background-color;
+  
+  &:before, &:after{
+    position: absolute;    
+    top: $ribbon-ends-border-width;
+    border: $ribbon-ends-border-width solid darken($ribbon-background-color, 15%);
+    content: "";
+    z-index: -1;
+  }
+    
+  &:before{ 
+    left: -$ribbon-ends-width;
+    border-right-width: $ribbon-ends-width;
+    border-left-color: transparent;
+  }
+    
+  &:after{ 
+    right: -$ribbon-ends-width;
+    border-left-width: $ribbon-ends-width;
+    border-right-color: transparent;
+  }
+  
+  span:before, span:after{
+    position: absolute;
+    bottom: -$ribbon-ends-border-width;
+    border: $ribbon-ends-border-width solid darken($ribbon-background-color, 25%);
+    border-color: darken($ribbon-background-color, 25%) transparent transparent transparent;
+    content: "";
+  }
+  
+  span:before{
+    left: 0;
+    border-width: $ribbon-ends-border-width 0 0 $ribbon-ends-border-width;
+  }
+  
+  span:after{
+    right: 0;
+    border-width: $ribbon-ends-border-width $ribbon-ends-border-width 0 0;
+  }
+}
+
+h1{
+  margin: 100px auto 0;
+  padding: .3em;
+  text-align: center;
+  @include ribbon;
+}

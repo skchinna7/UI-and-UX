@@ -1,0 +1,290 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #ecf0f1;
+}
+
+	// VARIABLES
+
+	$small: 300px;
+	$medium: 600px;
+	$large: 900px;
+
+	// MIXINS
+
+	@mixin prefixr($property, $value, $prefixes: (webkit, moz, ms, o) ) {
+      @each $prefix in $prefixes {
+        -#{$prefix}-#{$property}: #{$value};
+      }
+      #{$property}: #{$value};
+	}
+
+	@mixin whiteSpaceReset() {
+		  font-size: 0;
+	}
+
+	@mixin keyframes($name) {
+	  @-webkit-keyframes #{$name} {
+	    @content;
+	  }
+	  @-moz-keyframes #{$name} {
+	    @content;
+	  }
+	  @-ms-keyframes #{$name} {
+	    @content;
+	  }
+	  @keyframes #{$name} {
+	    @content;
+	  }
+	}
+
+	@mixin ribbon($color: #e74c3c, $textColor: white, $size: 30px, $ribbonPosition: bottom) {
+
+      		// if the direction of the ribbon is neither "bottom" or "top", set the position to "bottom"
+      @if ($ribbonPosition != bottom and $ribbonPosition != top) {
+        $ribbonPosition: bottom;
+      }
+
+      @if ($ribbonPosition == bottom) {
+          //@include translate(30px);
+          @include prefixr(transform, translateY(30px));
+      }
+      @else {
+          @include prefixr(transform, translateY(-30px));
+      }
+
+      -webkit-animation: fadeIn .7s ease-in forwards;
+      animation: fadeIn .7s ease-in forwards;
+
+      span {
+        width: 100px;
+        position: relative;
+        display: block;
+        background: $color;
+        color: $textColor;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        min-width: 160px;
+        height: $size*2;
+        line-height: $size*2;
+        -webkit-transform-style: preserve-3d;
+
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+
+          #{$ribbonPosition}: -$size/2;
+
+          border: $size solid darken($color,10%);
+          z-index: -1;
+          -webkit-transform: translateZ(-1px);
+        }
+
+        &:before {
+          left: -$size*2 + $size/2;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          right: -$size*2 + $size/2;
+          border-right-color: transparent;
+        }
+
+        & span:before,
+        & span:after {
+          content: "";
+          position: absolute;
+          display: block;
+          border-style: solid;
+
+          #{$ribbonPosition}: -$size/2;
+
+          @if $ribbonPosition == bottom {
+            border-color: darken($color, 30%) transparent transparent transparent;
+          }
+          @else {
+            border-color: transparent transparent darken($color, 30%) transparent;
+          }
+
+        }
+
+        & span:before {
+          left: 0;
+
+          @if $ribbonPosition == bottom {
+            border-width: $size/2 0 0 $size/2;
+          }
+          @else {
+            border-width: 0 0 $size/2 $size/2;
+          }
+
+        }
+
+        & span:after {
+          right: 0;
+
+          @if $ribbonPosition == bottom {
+            border-width: $size/2 $size/2 0 0;
+          }
+          @else {
+             border-width: 0 $size/2 $size/2 0;
+          }
+        }
+      }
+	}
+
+	@mixin fromWidth($size) {
+		  @media screen and(min-width: $size) {
+			    @content;
+		  }
+	}
+
+	@mixin medium() {
+		  @include fromWidth($medium) {
+			    @content;
+		  }
+	}
+
+	@mixin large() {
+  @include fromWidth($large) {
+    @content;
+  }
+	}
+
+	// ANIMATION
+	@include keyframes(fadeIn) {
+  		0% { opacity: 0; }
+		  100% { @include prefixr(transform,translateY(0)); opacity: 1; }
+	}
+
+
+// DEFAULT STYLES
+
+.wrapper {
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+.left,.right {
+  display: block;
+  padding: 100px;
+  border: 3px solid #2c3e50;
+  background: #95a5a6;
+  position: relative;
+  z-index: 1;
+  
+  @include medium {
+    display: inline-block;
+  }
+}
+
+.ribbon-wrapper {
+  opacity: 0;
+  -webkit-animation: fadeIn .7s ease-in forwards;
+  animation: fadeIn .7s ease-in forwards;
+  font-size: 20px;
+  margin: 40px auto 40px;
+}
+
+.big {
+  @include ribbon(#e74c3c,white,15px);
+  
+  @include medium {
+    @include ribbon(#e74c3c,white,20px);
+    font-size: 22px;
+    }
+
+  @include large {
+      @include ribbon(#e74c3c,white,30px);
+      font-size: 25px;
+    }
+
+}
+
+.medium {
+  @include ribbon(#2ecc71, white, 10px);
+  font-size: 16px;
+  
+  @include medium {
+	    @include ribbon(#2ecc71,white,15px);
+	    font-size: 18px;
+	  }
+
+  @include large {
+    @include ribbon(#2ecc71,white,20px);
+    font-size: 20px;
+  }
+
+}
+
+.small {
+  @include ribbon(#1abc9c,white,5px);
+  font-size: 10px;
+
+  @include medium {
+    @include ribbon(#1abc9c,white,10px);
+    font-size: 12px;
+  }
+
+  @include large {
+    @include ribbon(#1abc9c,white,15px);
+    font-size: 14px;
+  }
+
+}
+
+.topBig {
+   @include ribbon(#9b59b6,white,15px, top);
+
+  @include medium {
+    @include ribbon(#9b59b6,white,20px,top);
+    font-size: 22px;
+  }
+
+  @include large {
+    @include ribbon(#9b59b6,white,30px,top);
+    font-size: 25px;
+  }
+
+}
+
+.topMedium {
+  @include ribbon(#34495e, white, 10px, top);
+  font-size: 16px;
+
+  @include medium {
+    @include ribbon(#34495e,white,15px,top);
+    font-size: 18px;
+  }
+
+  @include large {
+    @include ribbon(#34495e,white,20px,top);
+    font-size: 20px;
+  }
+
+}
+
+.topSmall {
+  @include ribbon(#e67e22,white,5px, top);
+  font-size: 10px;
+
+  @include medium {
+    @include ribbon(#e67e22,white,10px,top);
+    font-size: 12px;
+  }
+
+  @include large {
+    @include ribbon(#e67e22,white,15px,top);
+    font-size: 14px;
+  }
+
+}

@@ -1,0 +1,149 @@
+div {
+    width: 500px;
+    height: 200px;
+    background-color: #ded8c5;
+    margin: 0 auto;
+    padding: 20px 0px;
+    -webkit-transition: .2s;
+       -moz-transition: .2s;
+        -ms-transition: .2s;
+         -o-transition: .2s;
+            transition: .2s;
+}
+
+input {
+    display: block;
+    width: 130px;
+    margin: 20px auto;
+}
+
+/* Ribbon */
+.ribbon {
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+.ribbon:before,
+.ribbon i:before {
+    content: '';
+    position: absolute;
+    bottom: -23px;
+    border: 24px solid #c45045;
+}
+
+.ribbon:before {
+    left: -54px;
+    border-left-color: transparent;
+    -webkit-transform: rotate(-16deg);
+       -moz-transform: rotate(-16deg);
+        -ms-transform: rotate(-16deg);
+         -o-transform: rotate(-16deg);
+            transform: rotate(-16deg);
+}
+.oldie .ribbon:before {
+    left: -48px;
+}
+
+.ribbon i:before {
+    right: -54px;
+    border-right-color: transparent;
+    -webkit-transform: rotate(16deg);
+       -moz-transform: rotate(16deg);
+        -ms-transform: rotate(16deg);
+         -o-transform: rotate(16deg);
+            transform: rotate(16deg);
+    z-index: -1;
+}
+.oldie .ribbon i:before {
+    right: -48px;
+}
+
+.ribbon i:after,
+.ribbon u:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    bottom: -16px;
+    z-index: 0;
+}
+
+.ribbon i:after {
+    right: -16px;
+    border-color: transparent transparent transparent #a33d33;
+    border-width: 0 0 16px 16px;
+}
+
+.ribbon u:after {
+    left: 0;
+    border-color: transparent #a33d33 transparent transparent;
+    border-width: 0 16px 16px 0;
+}
+
+.ribbon u {
+    display: block;
+    position: relative;
+    width: 100%;
+    left: -16px;
+    padding: 0 16px 16px;
+    background: #d0726a;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d0726a), to(#c7574d));
+    background-image: -webkit-linear-gradient(#d0726a, #c7574d);
+    background-image:    -moz-linear-gradient(#d0726a, #c7574d);
+    background-image:     -ms-linear-gradient(#d0726a, #c7574d);
+    background-image:         linear-gradient(#d0726a, #c7574d);
+    -webkit-border-top-left-radius: 50% 16px;
+            border-top-left-radius: 50% 16px;
+    -webkit-border-top-right-radius: 50% 16px;
+            border-top-right-radius: 50% 16px;
+    text-align: center;
+    font: 28px/48px Museo, cursive;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(163, 61, 51, .8), 0 2px 1px rgba(163, 61, 51, .6);
+}
+.oldie .ribbon u {
+    padding: 0 16px;
+    *left: 0px;
+    *padding: 0;
+}
+
+.ribbon u {
+    left: 0;
+    margin: 0 -16px;
+    width: auto;
+}
+
+.ribbon u::selection { background-color: #a33d33; }
+.ribbon u::-moz-selection { background-color: #a33d33; }
+
+.ribbon u:before,
+.ribbon:after {
+    content: '';
+    position: absolute;
+    height: 16px;
+    left: 0;
+    bottom: 0;
+    -webkit-border-top-left-radius: 50% 16px;
+            border-top-left-radius: 50% 16px;
+    -webkit-border-top-right-radius: 50% 16px;
+            border-top-right-radius: 50% 16px;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, .3);
+}
+.oldie .ribbon u:before,
+.oldie .ribbon:after {
+    content: none;
+}
+
+.ribbon u:before {
+    width: 100%;
+    background: #a33d33;
+}
+
+.ribbon:after {
+    width: 100%;
+    background: #ded8c5;
+    z-index: 1;
+}

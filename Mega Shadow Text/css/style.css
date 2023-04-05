@@ -1,0 +1,33 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:700);
+
+
+html, body { margin:0; overflow:hidden; min-height:100%; }
+
+html { position:relative; padding:20px 0 0; }
+body { position:absolute; height:100%; width:100%; text-align:center; background:hsl(201,3%,50%); }
+
+
+h1 { 
+  font:65px "Oswald";
+  text-transform:uppercase;
+  perspective:100;
+}
+
+strong {
+  display:block;
+  position:absolute;
+  width:100%;
+  text-align:center;
+  line-height:58px;
+  color:hsl(201,3%,18%);
+}
+
+strong:first-child { 
+  transform:rotateX(-110deg);
+  transform-origin:center bottom;
+  color:transparent;
+  user-select:none;
+  text-shadow:
+    0 0 1px hsla(201,3%,30%,.6),
+    0 -7px 10px hsla(201,3%,30%,.3);
+}

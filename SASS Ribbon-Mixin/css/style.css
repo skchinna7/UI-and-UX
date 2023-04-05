@@ -1,0 +1,40 @@
+h1 {
+  margin: 100px auto 0;
+  padding: .3em;
+  text-align: center;
+  width: 15em;
+  position: relative;
+  background: #d7e503;
+}
+h1:before, h1:after {
+  position: absolute;
+  top: 0.9em;
+  border: 0.9em solid #909902;
+  content: "";
+  z-index: -1;
+}
+h1:before {
+  left: -1.5em;
+  border-right-width: 1.5em;
+  border-left-color: transparent;
+}
+h1:after {
+  right: -1.5em;
+  border-left-width: 1.5em;
+  border-right-color: transparent;
+}
+h1 span:before, h1 span:after {
+  position: absolute;
+  bottom: -0.9em;
+  border: 0.9em solid #616701;
+  border-color: #616701 transparent transparent transparent;
+  content: "";
+}
+h1 span:before {
+  left: 0;
+  border-width: 0.9em 0 0 0.9em;
+}
+h1 span:after {
+  right: 0;
+  border-width: 0.9em 0.9em 0 0;
+}

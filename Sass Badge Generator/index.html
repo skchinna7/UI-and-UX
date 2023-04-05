@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sass Badge Generator 9000 - CodePen</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel='stylesheet prefetch' href='css/frmlu.css'>
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+  <body data-badge='awesome'>
+<article class='demo-desc'>
+<h1 class='title'>Sass Badge Generator.</h1>
+  <p>A Sass mixin that adds fully customizable ribbons to specified elements. Follow me <a href='https://twitter.com/awesomephant'>@awesomephant</a> for updates</p>
+</article>
+<section class='demo'>
+<figure class='product' data-badge='new'>
+  <img src='http://www.lorempixel.com/600/700/technics/10'/>
+  <figcaption>
+    <h2>Some Cool Product</h2>
+    <span class='description'>And some awesome description.</span>
+  </figcaption>
+</figure>
+  <figure class='product'>
+  <img src='http://www.lorempixel.com/600/700/technics/1'/>
+  <figcaption>
+    <h2>Some Cool Product</h2>
+    <span class='description'>And some awesome description.</span>
+  </figcaption>
+</figure>
+  <figure class='product' data-badge='cute'>
+  <iframe src="http://www.youtube.com/embed/InCUx_Z3AYo?rel=0" frameborder="0" allowfullscreen></iframe>
+    <figcaption>
+    <h2>Some Cool Product</h2>
+    <span class='description'>And some awesome description.</span>
+  </figcaption>
+</figure>
+
+  <figure class='product' data-badge='left-2'>
+  <img src='http://www.lorempixel.com/600/700/technics/5'/>
+  <figcaption>
+    <h2>Some Cool Product</h2>
+    <span class='description'>And some awesome description.</span>
+  </figcaption>
+</figure>
+
+<figure class='product' data-badge='premium'>
+  <img src='http://www.lorempixel.com/600/700/technics/2'/>
+  <figcaption>
+    <h2>Some Cool Product</h2>
+    <span class='description'>And some awesome description.</span>
+  </figcaption>
+</figure>
+  <figure class='product'>
+  <img src='http://www.lorempixel.com/600/700/technics/3'/>
+  <figcaption>
+    <h2>Some Cool Product</h2>
+    <span class='description'>And some awesome description.</span>
+  </figcaption>
+</figure>
+
+<figure class='product' data-badge='sold'>
+  <img src='http://www.lorempixel.com/600/700/technics/6'/>
+  <figcaption>
+    <h2>Some Cool Product</h2>
+    <span class='description'>And some awesome description.</span>
+  </figcaption>
+</figure>
+</section>
+<section class='demo-desc'>
+   <h2>Features</h2>
+<ul>
+  <li>Fully customizable</li>
+  <li>variable font-size</li>
+  <li>left ot right alignment</li>
+  <li>No extra markup needed. (Uses the data-badge attribute + pseudo elements)</li>
+  <li>comes with two awesome styles</li>
+  <li>works on <em>any Element</em>.</li>
+</ul>  
+
+<h2>Usage</h2>
+<h3>HTML</h3>
+  <pre>
+  <code class="language-markup">
+&lt;div data-badge='new'&gt;&lt;/div&gt;
+&lt;div data-badge='sold'&gt;&lt;/div&gt;  
+&lt;div data-badge='premium'&gt;&lt;/div&gt; </code>
+    </pre>
+  <h3>Sass</h3>
+  <pre>
+  <code class="language-scss">
+//Set background color:
+$bg: rgb(240,240,240);
+
+//Set the font size
+$badge-font-size: 13px;
+
+//Pick a style:
+$style: flat; //use 'flat' or 'skeuomorph'
+
+//Pick a position
+$position: left; //You can choose between 'left' & 'right'
+
+//Define your badges:
+//(1. Identifier, 2. Color, 3. Text)
+$badges: ('new', $blue, 'New!')
+         ('sold', $red, 'Sold!')
+         ('premium', $green, 'Premium');
+
+ //That's it!</code>
+  </pre>
+</section>
+</body>
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+  <script src='data:application/octet-stream'></script><script src='charset=utf-8,%2F**%0A%20*%20Prism%3A%20Lightweight%2C%20robust%2C%20elegant%20syntax%20highlighting%0A%20*%20MIT%20license%20http%3A%2F%2Fwww.opensource.org%2Flicenses%2Fmit-license.php%2F%0A%20*%20%40author%20Lea%20Verou%20http%3A%2F%2Flea.verou.me%0A%20*%2F(function()%7Bvar%20e%3D%2F%5Cblang(%3F%3Auage)%3F-(%3F!%5C*)(%5Cw%2B)%5Cb%2Fi%2Ct%3Dself.Prism%3D%7Butil%3A%7Btype%3Afunction(e)%7Breturn%20Object.prototype.toString.call(e).match(%2F%5C%5Bobject%20(%5Cw%2B)%5C%5D%2F)%5B1%5D%7D%2Cclone%3Afunction(e)%7Bvar%20n%3Dt.util.type(e)%3Bswitch(n)%7Bcase%22Object%22%3Avar%20r%3D%7B%7D%3Bfor(var%20i%20in%20e)e.hasOwnProperty(i)%26%26(r%5Bi%5D%3Dt.util.clone(e%5Bi%5D))%3Breturn%20r%3Bcase%22Array%22%3Areturn%20e.slice()%7Dreturn%20e%7D%7D%2Clanguages%3A%7Bextend%3Afunction(e%2Cn)%7Bvar%20r%3Dt.util.clone(t.languages%5Be%5D)%3Bfor(var%20i%20in%20n)r%5Bi%5D%3Dn%5Bi%5D%3Breturn%20r%7D%2CinsertBefore%3Afunction(e%2Cn%2Cr%2Ci)%7Bi%3Di%7C%7Ct.languages%3Bvar%20s%3Di%5Be%5D%2Co%3D%7B%7D%3Bfor(var%20u%20in%20s)if(s.hasOwnProperty(u))%7Bif(u%3D%3Dn)for(var%20a%20in%20r)r.hasOwnProperty(a)%26%26(o%5Ba%5D%3Dr%5Ba%5D)%3Bo%5Bu%5D%3Ds%5Bu%5D%7Dreturn%20i%5Be%5D%3Do%7D%2CDFS%3Afunction(e%2Cn)%7Bfor(var%20r%20in%20e)%7Bn.call(e%2Cr%2Ce%5Br%5D)%3Bt.util.type(e)%3D%3D%3D%22Object%22%26%26t.languages.DFS(e%5Br%5D%2Cn)%7D%7D%7D%2ChighlightAll%3Afunction(e%2Cn)%7Bvar%20r%3Ddocument.querySelectorAll('code%5Bclass*%3D%22language-%22%5D%2C%20%5Bclass*%3D%22language-%22%5D%20code%2C%20code%5Bclass*%3D%22lang-%22%5D%2C%20%5Bclass*%3D%22lang-%22%5D%20code')
+%3Bfor(var%20i%3D0%2Cs%3Bs%3Dr%5Bi%2B%2B%5D%3B)t.highlightElement(s%2Ce%3D%3D%3D!0%2Cn)%7D%2ChighlightElement%3Afunction(r%2Ci%2Cs)%7Bvar%20o%2Cu%2Ca%3Dr%3Bwhile(a%26%26!e.test(a.className))a%3Da.parentNode%3Bif(a)%7Bo%3D(a.className.match(e)%7C%7C%5B%2C%22%22%5D)%5B1%5D%3Bu%3Dt.languages%5Bo%5D%7Dif(!u)return%3Br.className%3Dr.className.replace(e%2C%22%22).replace(%2F%5Cs%2B%2Fg%2C%22%20%22)%2B%22%20language-%22%2Bo%3Ba%3Dr.parentNode%3B%2Fpre%2Fi.test(a.nodeName)%26%26(
+a.className%3Da.className.replace(e%2C%22%22).replace(%2F%5Cs%2B%2Fg%2C%22%20%22)%2B%22%20language-%22%2Bo)%3Bvar%20f%3Dr.textContent%3Bif(!f)return%3Bf%3Df.replace(%2F%26%2Fg%2C%22%26amp%3B%22).replace(%2F%3C%2Fg%2C%22%26lt%3B%22).replace(%2F%3E%2Fg%2C%22%26gt%3B%22).replace(%2F%5Cu00a0%2Fg%2C%22%20%22)%3Bvar%20l%3D%7Belement%3Ar%2Clanguage%3Ao%2Cgrammar%3Au%2Ccode%3Af%7D%3Bt.hooks.run(%22before-highlight%22%2Cl)%3Bif(i%26%26self.Worker)%7Bvar%20c%3Dnew%20Worker(t.filename)
+  %3Bc.onmessage%3Dfunction(e)%7Bl.highlightedCode%3Dn.stringify(JSON.parse(e.data)%2Co)%3Bl.element.innerHTML%3Dl.highlightedCode%3Bs%26%26s.call(l.element)%3Bt.hooks.run(%22after-highlight%22%2Cl)%7D%3Bc.postMessage(JSON.stringify(%7Blanguage%3Al.language%2Ccode%3Al.code%7D))%7Delse%7Bl.highlightedCode%3Dt.highlight(l.code%2Cl.grammar%2Cl.language)%3Bl.element.innerHTML%3Dl.highlightedCode%3Bs%26%26s.call(r)%3Bt.hooks.run(%22after-highlight%22%2Cl)%7D%7D%2Chighlight%3Afunction(e%2Cr%2Ci)%7Breturn%20n.stringify(t.tokenize(e%2Cr)%2Ci)%7D%2Ctokenize%3Afunction(e%2Cn%2Cr)%7Bvar%20i%3Dt.Token%2Cs%3D%5Be%5D%2Co%3Dn.rest%3Bif(o)%7Bfor(var%20u%20in%20o)n%5Bu%5D%3Do%5Bu%5D%3Bdelete%20n.rest%7De%3Afor(var%20u%20in%20n)%7Bif(!n.hasOwnProperty(u)%7C%7C!n%5Bu%5D)continue%3Bvar%20a%3Dn%5Bu%5D%2Cf%3Da.inside%2Cl%3D!!a.lookbehind%7C%7C0%3Ba%3Da.pattern%7C%7Ca%3Bfor(var%20c%3D0%3Bc%3Cs.length%3Bc%2B%2B)%7Bvar%20h%3Ds%5Bc%5D%3Bif(s.length%3Ee.length)break%20e%3Bif(h%20instanceof%20i)continue%3Ba.lastIndex%3D0%3Bvar%20p%3Da.exec(h)%3Bif(p)%7Bl%26%26(l%3Dp%5B1%5D.length)%3Bvar%20d%3Dp.index-1%2Bl%2Cp%3Dp%5B0%5D.slice(l)%2Cv%3Dp.length%2Cm%3Dd%2Bv%2Cg%3Dh.slice(0%2Cd%2B1)%2Cy%3Dh.slice(m%2B1)%2Cb%3D%5Bc%2C1%5D%3Bg%26%26b.push(g)%3Bvar%20w%3Dnew%20i(u%2Cf%3Ft.tokenize(p%2Cf)%3Ap)%3Bb.push(w)%3By%26%26b.push(y)%3BArray.prototype.splice.apply(s%2Cb)%7D%7D%7Dreturn%20s%7D%2Chooks%3A%7Ball%3A%7B%7D%2Cadd%3Afunction(e%2Cn)%7Bvar%20r%3Dt.hooks.all%3Br%5Be%5D%3Dr%5Be%5D%7C%7C%5B%5D%3Br%5Be%5D.push(n)%7D%2Crun%3Afunction(e%2Cn)%7Bvar%20r%3Dt.hooks.all%5Be%5D%3Bif(!r%7C%7C!r.length)return%3Bfor(var%20i%3D0%2Cs%3Bs%3Dr%5Bi%2B%2B%5D%3B)s(n)%7D%7D%7D%2Cn%3Dt.Token%3Dfunction(e%2Ct)%7Bthis.type%3De%3Bthis.content%3Dt%7D%3Bn.stringify%3Dfunction(e%2Cr%2Ci)%7Bif(typeof%20e%3D%3D%22string%22)return%20e%3Bif(Object.prototype.toString.call(e)%3D%3D%22%5Bobject%20Array%5D%22)return%20e.map(function(t)%7Breturn%20n.stringify(t%2Cr%2Ce)%7D).join(%22%22)%3Bvar%20s%3D%7Btype%3Ae.type%2Ccontent%3An.stringify(e.content%2Cr%2Ci)%2Ctag%3A%22span%22%2Cclasses%3A%5B%22token%22%2Ce.type%5D%2Cattributes%3A%7B%7D%2Clanguage%3Ar%2Cparent%3Ai%7D%3Bs.type%3D%3D%22comment%22%26%26(s.attributes.spellcheck%3D%22true%22)%3Bt.hooks.run(%22wrap%22%2Cs)%3Bvar%20o%3D%22%22%3Bfor(var%20u%20in%20s.attributes)o%2B%3Du%2B'%3D%22'%2B(s.attributes%5Bu%5D%7C%7C%22%22)%2B'%22'%3Breturn%22%3C%22%2Bs.tag%2B'%20class%3D%22'%2Bs.classes.join(%22%20%22)%2B'%22%20'%2Bo%2B%22%3E%22%2Bs.content%2B%22%3C%2F%22%2Bs.tag%2B%22%3E%22%7D%3Bif(!self.document)%7Bself.addEventListener(%22message%22%2Cfunction(e)%7Bvar%20n%3DJSON.parse(e.data)%2Cr%3Dn.language%2Ci%3Dn.code%3Bself.postMessage(JSON.stringify(t.tokenize(i%2Ct.languages%5Br%5D)))%3Bself.close()%7D%2C!1)%3Breturn%7Dvar%20r%3Ddocument.getElementsByTagName(%22script%22)%3Br%3Dr%5Br.length-1%5D%3Bif(r)%7Bt.filename%3Dr.src%3Bdocument.addEventListener%26%26!r.hasAttribute(%22data-manual%22)%26%26document.addEventListener(%22DOMContentLoaded%22%2Ct.highlightAll)%7D%7D)()%3B%3B%0APrism.languages.markup%3D%7Bcomment%3A%2F%26lt%3B!--%5B%5Cw%5CW%5D*%3F--(%26gt%3B%7C%26gt%3B)%2Fg%2Cprolog%3A%2F%26lt%3B%5C%3F.%2B%3F%5C%3F%26gt%3B%2F%2Cdoctype%3A%2F%26lt%3B!DOCTYPE.%2B%3F%26gt%3B%2F%2Ccdata%3A%2F%26lt%3B!%5C%5BCDATA%5C%5B%5B%5Cw%5CW%5D%2B%3F%5D%5D%26gt%3B%2Fi%2Ctag%3A%7Bpattern%3A%2F%26lt%3B%5C%2F%3F%5B%5Cw%3A-%5D%2B%5Cs*(%3F%3A%5Cs%2B%5B%5Cw%3A-%5D%2B(%3F%3A%3D(%3F%3A(%22%7C')(%5C%5C%3F%5B%5Cw%5CW%5D)*%3F%5C1%7C%5Cw%2B))%3F%5Cs*)*%5C%2F%3F%26gt%3B%2Fgi%2Cinside%3A%7Btag%3A%7Bpattern%3A%2F%5E%26lt%3B%5C%2F%3F%5B%5Cw%3A-%5D%2B%2Fi%2Cinside%3A%7Bpunctuation%3A%2F%5E%26lt%3B%5C%2F%3F%2F%2Cnamespace%3A%2F%5E%5B%5Cw-%5D%2B%3F%3A%2F%7D%7D%2C%22attr-value%22%3A%7Bpattern%3A%2F%3D(%3F%3A('%7C%22)%5B%5Cw%5CW%5D*%3F(%5C1)%7C%5B%5E%5Cs%3E%5D%2B)%2Fgi%2Cinside%3A%7Bpunctuation%3A%2F%3D%7C%26gt%3B%7C%22%2Fg%7D%7D%2Cpunctuation%3A%2F%5C%2F%3F%26gt%3B%2Fg%2C%22attr-name%22%3A%7Bpattern%3A%2F%5B%5Cw%3A-%5D%2B%2Fg%2Cinside%3A%7Bnamespace%3A%2F%5E%5B%5Cw-%5D%2B%3F%3A%2F%7D%7D%7D%7D%2Centity%3A%2F%26amp%3B%23%3F%5B%5Cda-z%5D%7B1%2C8%7D%3B%2Fgi%7D%3BPrism.hooks.add(%22wrap%22%2Cfunction(e)%7Be.type%3D%3D%3D%22entity%22%26%26(e.attributes.title%3De.content.replace(%2F%26amp%3B%2F%2C%22%26%22))%7D)%3B%3B%0APrism.languages.css%3D%7Bcomment%3A%2F%5C%2F%5C*%5B%5Cw%5CW%5D*%3F%5C*%5C%2F%2Fg%2Catrule%3A%2F%40%5B%5Cw-%5D%2B%3F(%5Cs%2B%5B%5E%3B%7B%5D%2B)%3F(%3F%3D%5Cs*%7B%7C%5Cs*%3B)%2Fgi%2Curl%3A%2Furl%5C((%5B%22'%5D%3F).*%3F%5C1%5C)%2Fgi%2Cselector%3A%2F%5B%5E%5C%7B%5C%7D%5Cs%5D%5B%5E%5C%7B%5C%7D%5D*(%3F%3D%5Cs*%5C%7B)%2Fg%2Cproperty%3A%2F(%5Cb%7C%5CB)%5Ba-z-%5D%2B(%3F%3D%5Cs*%3A)%2Fig%2Cstring%3A%2F(%22%7C')(%5C%5C%3F.)*%3F%5C1%2Fg%2Cimportant%3A%2F%5CB!important%5Cb%2Fgi%2Cignore%3A%2F%26(lt%7Cgt%7Camp)%3B%2Fgi%2Cpunctuation%3A%2F%5B%5C%7B%5C%7D%3B%3A%5D%2Fg%7D%3BPrism.languages.markup%26%26Prism.languages.insertBefore(%22markup%22%2C%22tag%22%2C%7Bstyle%3A%7Bpattern%3A%2F(%26lt%3B%7C%3C)style%5B%5Cw%5CW%5D*%3F(%3E%7C%26gt%3B)%5B%5Cw%5CW%5D*%3F(%26lt%3B%7C%3C)%5C%2Fstyle(%3E%7C%26gt%3B)%2Fig%2Cinside%3A%7Btag%3A%7Bpattern%3A%2F(%26lt%3B%7C%3C)style%5B%5Cw%5CW%5D*%3F(%3E%7C%26gt%3B)%7C(%26lt%3B%7C%3C)%5C%2Fstyle(%3E%7C%26gt%3B)%2Fig%2Cinside%3APrism.languages.markup.tag.inside%7D%2Crest%3APrism.languages.css%7D%7D%7D)%3B%3B%0APrism.languages.clike%3D%7Bcomment%3A%7Bpattern%3A%2F(%5E%7C%5B%5E%5C%5C%5D)(%5C%2F%5C*%5B%5Cw%5CW%5D*%3F%5C*%5C%2F%7C(%5E%7C%5B%5E%3A%5D)%5C%2F%5C%2F.*%3F(%5Cr%3F%5Cn%7C%24))%2Fg%2Clookbehind%3A!0%7D%2Cstring%3A%2F(%22%7C')(%5C%5C%3F.)*%3F%5C1%2Fg%2C%22class-name%22%3A%7Bpattern%3A%2F((%3F%3Aclass%7Cinterface%7Cextends%7Cimplements%7Ctrait%7Cinstanceof%7Cnew)%5Cs%2B)%5Ba-z0-9_%5C.%5C%5C%5D%2B%2Fig%2Clookbehind%3A!0%2Cinside%3A%7Bpunctuation%3A%2F(%5C.%7C%5C%5C)%2F%7D%7D%2Ckeyword%3A%2F%5Cb(if%7Celse%7Cwhile%7Cdo%7Cfor%7Creturn%7Cin%7Cinstanceof%7Cfunction%7Cnew%7Ctry%7Ccatch%7Cfinally%7Cnull%7Cbreak%7Ccontinue)%5Cb%2Fg%2C%22boolean%22%3A%2F%5Cb(true%7Cfalse)%5Cb%2Fg%2C%22function%22%3A%7Bpattern%3A%2F%5Ba-z0-9_%5D%2B%5C(%2Fig%2Cinside%3A%7Bpunctuation%3A%2F%5C(%2F%7D%7D%2Cnumber%3A%2F%5Cb-%3F(0x%5B%5CdA-Fa-f%5D%2B%7C%5Cd*%5C.%3F%5Cd%2B(%5BEe%5D-%3F%5Cd%2B)%3F)%5Cb%2Fg%2Coperator%3A%2F%5B-%2B%5D%7B1%2C2%7D%7C!%7C%3D%3F%26lt%3B%7C%3D%3F%26gt%3B%7C%3D%7B1%2C2%7D%7C(%26amp%3B)%7B1%2C2%7D%7C%5C%7C%3F%5C%7C%7C%5C%3F%7C%5C*%7C%5C%2F%7C%5C~%7C%5C%5E%7C%5C%25%2Fg%2Cignore%3A%2F%26(lt%7Cgt%7Camp)%3B%2Fgi%2Cpunctuation%3A%2F%5B%7B%7D%5B%5C%5D%3B()%2C.%3A%5D%2Fg%7D%3B%3B%0APrism.languages.javascript%3DPrism.languages.extend(%22clike%22%2C%7Bkeyword%3A%2F%5Cb(var%7Clet%7Cif%7Celse%7Cwhile%7Cdo%7Cfor%7Creturn%7Cin%7Cinstanceof%7Cfunction%7Cnew%7Cwith%7Ctypeof%7Ctry%7Ccatch%7Cfinally%7Cnull%7Cbreak%7Ccontinue)%5Cb%2Fg%2Cnumber%3A%2F%5Cb-%3F(0x%5B%5CdA-Fa-f%5D%2B%7C%5Cd*%5C.%3F%5Cd%2B(%5BEe%5D-%3F%5Cd%2B)%3F%7CNaN%7C-%3FInfinity)%5Cb%2Fg%7D)%3BPrism.languages.insertBefore(%22javascript%22%2C%22keyword%22%2C%7Bregex%3A%7Bpattern%3A%2F(%5E%7C%5B%5E%2F%5D)%5C%2F(%3F!%5C%2F)(%5C%5B.%2B%3F%5D%7C%5C%5C.%7C%5B%5E%2F%5Cr%5Cn%5D)%2B%5C%2F%5Bgim%5D%7B0%2C3%7D(%3F%3D%5Cs*(%24%7C%5B%5Cr%5Cn%2C.%3B%7D)%5D))%2Fg%2Clookbehind%3A!0%7D%7D)%3BPrism.languages.markup%26%26Prism.languages.insertBefore(%22markup%22%2C%22tag%22%2C%7Bscript%3A%7Bpattern%3A%2F(%26lt%3B%7C%3C)script%5B%5Cw%5CW%5D*%3F(%3E%7C%26gt%3B)%5B%5Cw%5CW%5D*%3F(%26lt%3B%7C%3C)%5C%2Fscript(%3E%7C%26gt%3B)%2Fig%2Cinside%3A%7Btag%3A%7Bpattern%3A%2F(%26lt%3B%7C%3C)script%5B%5Cw%5CW%5D*%3F(%3E%7C%26gt%3B)%7C(%26lt%3B%7C%3C)%5C%2Fscript(%3E%7C%26gt%3B)%2Fig%2Cinside%3APrism.languages.markup.tag.inside%7D%2Crest%3APrism.languages.javascript%7D%7D%7D)%3B%3B%0APrism.languages.scss%3DPrism.languages.extend(%22css%22%2C%7Bcomment%3A%7Bpattern%3A%2F(%5E%7C%5B%5E%5C%5C%5D)(%5C%2F%5C*%5B%5Cw%5CW%5D*%3F%5C*%5C%2F%7C%5C%2F%5C%2F.*%3F(%5Cr%3F%5Cn%7C%24))%2Fg%2Clookbehind%3A!0%7D%2Catrule%3A%2F%40%5B%5Cw-%5D%2B(%3F%3D%5Cs%2B(%5C(%7C%5C%7B%7C%3B))%2Fgi%2Curl%3A%2F(%5B-a-z%5D%2B-)*url(%3F%3D%5C()%2Fgi%2Cselector%3A%2F(%5B%5E%40%3B%5C%7B%5C%7D%5C(%5C)%5D%3F(%5B%5E%40%3B%5C%7B%5C%7D%5C(%5C)%5D%7C%26amp%3B%7C%5C%23%5C%7B%5C%24%5B-_%5Cw%5D%2B%5C%7D)%2B)(%3F%3D%5Cs*%5C%7B(%5C%7D%7C%5Cs%7C%5B%5E%5C%7D%5D%2B(%3A%7C%5C%7B)%5B%5E%5C%7D%5D%2B))%2Fgm%7D)%3BPrism.languages.insertBefore(%22scss%22%2C%22atrule%22%2C%7Bkeyword%3A%2F%40(if%7Celse%20if%7Celse%7Cfor%7Ceach%7Cwhile%7Cimport%7Cextend%7Cdebug%7Cwarn%7Cmixin%7Cinclude%7Cfunction%7Creturn)%7C(%3F%3D%40for%5Cs%2B%5C%24%5B-_%5Cw%5D%2B%5Cs)%2Bfrom%2Fi%7D)%3BPrism.languages.insertBefore(%22scss%22%2C%22property%22%2C%7Bvariable%3A%2F((%5C%24%5B-_%5Cw%5D%2B)%7C(%23%5C%7B%5C%24%5B-_%5Cw%5D%2B%5C%7D))%2Fi%7D)%3BPrism.languages.
+insertBefore(%22scss%22%2C%22ignore%22%2C%7Bplaceholder%3A%2F%25%5B-_%5Cw%5D%2B%2Fi%2Cstatement%3A%2F%5CB!(default%7Coptional)%5Cb%2Fgi%2C%22boolean%22%3A%2F%5Cb(true%7Cfalse)%5Cb%2Fg%2C%22null%22%3A%2F%5Cb(null)%5Cb%2Fg%2Coperator%3A%2F%5Cs%2B(%5B-%2B%5D%7B1%2C2%7D%7C%3D%7B1%2C2%7D%7C!%3D%7C%5C%7C%3F%5C%7C%7C%5C%3F%7C%5C*%7C%5C%2F%7C%5C%25)%5Cs%2B%2Fg%7D)%3B%0A%3B%0A'></script>
+</body>
+</html>

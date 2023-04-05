@@ -1,0 +1,87 @@
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+ .ribbon {
+    display:block;
+    position:relative;
+    width:230px;
+    height:56px;
+    padding-top:3px;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    text-decoration:none;
+    cursor:pointer;
+    transition: all 0.1s ease;
+}
+.ribbon .btn {
+    width:75%;
+    height:50px;
+    margin:0 auto;
+    border-radius:5px;
+    background-color:#32477e;
+    line-height:50px;
+    text-align:center;
+    font-family:'Fjalla One', sans-serif;
+    font-size:1em;
+    font-weight:400;
+    text-transform:uppercase;
+    color:white;
+    text-shadow: 0px 2px rgba(0, 0, 0, 0.4);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all 0.1s ease;
+}
+.btn:before, .btn:after {
+    content:"";
+    display:block;
+    position:absolute;
+    width:25%;
+    height:0;
+    top:10px;
+    border-top: 18px solid #25365e;
+    border-bottom: 18px solid #25365e;
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+    transform:rotate(360deg);
+    z-index:-1;
+    transition: all 0.2s ease;
+}
+.btn:before {
+    left:0px;
+    border-left:12px solid rgba(255, 255, 255, 0);
+}
+.btn:after {
+    right:0px;
+    border-right:12px solid rgba(255, 255, 255, 0);
+}
+/*Colors*/
+ .ribbon.green .btn {
+    background-color:#1a6342;
+}
+.ribbon.green .btn:before, .ribbon.green .btn:after {
+    border-top-color:#044020;
+    border-bottom-color:#044020;
+}
+.ribbon.orange .btn {
+    background-color:#cd4d00;
+}
+.ribbon.orange .btn:before, .ribbon.orange .btn:after {
+    border-top-color:#893d10;
+    border-bottom-color:#893d10;
+}
+/*Hover*/
+ .ribbon:hover {
+    padding-top:0;
+}
+.ribbon:hover .btn {
+    height:56px;
+    width:77%;
+    line-height:56px;
+    font-size:1.1em;
+    top:0px;
+}
+.ribbon:hover .btn:before {
+    left:5%;
+}
+.ribbon:hover .btn:after {
+    right:5%;
+}

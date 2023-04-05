@@ -1,0 +1,281 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #fff;
+}
+
+.demo-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  
+  .demo-panel {
+    flex-grow: 1;
+    height: 100%;
+    
+    /* border: 1px solid white; */
+    
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.spinner {
+  position: relative;
+  top: -70px;
+  width: 100px;
+  /* height: 100px; */
+  transform-origin: 50% 50%;
+  transform: rotate(30deg) scale(0.5, 1);
+}
+
+.bar-outer {
+  
+  transform-origin: 5px 5px;
+  
+  width: 100px;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  &.right {
+    width: 94px;
+    .bar {
+      background: #6628F6;
+    }
+  }
+  
+  &.down-right {
+    /*transform-origin: 10px 10px;*/
+    transform: rotate(20deg);
+    
+    .bar {
+      background: #2D4DF6;
+    }
+  }
+  
+  &.up-right {
+    /* transform-origin: 10px 10px; */
+    transform: rotate(-20deg);
+    
+    .bar {
+      background: #B01BF6;
+    }
+  }
+  
+  &.up-left {
+    
+    transform: rotate(20deg);
+    
+    .bar {
+      background: #6628F6;
+      animation-name: ribbon-left;
+    }
+  }
+  
+  &.down-left {
+    /* transform-origin: 5px 5px; */
+    transform: rotate(-20deg);
+    
+    .bar {
+      background: #D580FD;
+      animation-name: ribbon-left;
+    }
+  }
+  
+  
+  
+  .bar {
+    width: 100px;
+    height: 10px;
+    border-radius: 5px;
+    background: gray;
+
+    position: absolute;
+    top: 0;
+    
+    opacity: 0;
+    
+    /* @keyframes name | duration | timing-function | delay | 
+   iteration-count | direction | fill-mode | play-state */
+    animation: ribbon 1.2s linear 0s infinite;
+  }
+}
+
+@mixin delay($i) {
+  animation-delay: $i * (0.15s);
+}
+
+.top.b1 {
+  top: 0px;
+  
+  .bar {
+    @include delay(0);
+  }
+}
+
+.b2 {
+  top: 31px;
+  
+  .bar {
+    @include delay(1)
+  }
+}
+
+.b3 {
+  top: 31px;
+  
+  .bar {
+    @include delay(2)
+  }
+}
+
+.b4 {
+  top: 93px;
+  
+  .bar {
+    @include delay(3)
+  }
+}
+
+.bottom.b5 {
+  top: 93px;
+  
+  .bar {
+    @include delay(4)
+  }
+}
+
+.b6 {
+  top: 62px;
+  
+  .bar {
+    @include delay(5)
+  }
+}
+
+.b7 {
+  top: 62px;
+  
+  .bar {
+    background: red;
+    @include delay(6)
+  }
+}
+
+.b8 {
+  top: 0px;
+  
+  .bar {
+    @include delay(7)
+  }
+}
+
+
+
+@keyframes ribbon-outer {
+  from {
+    
+  }
+  
+  to {
+    
+  }
+}
+
+@keyframes ribbon {
+  from {
+    opacity: 1;
+    left: 0%;
+    right: auto;
+    width: 0px;
+  }
+  
+  11% {
+    width: 100%;
+    left: 0;
+  }
+  
+  12% {
+    width: 100%;
+    /* left: 100%; */
+    left: auto;
+    right: 0;
+    /* opacity: 1; */
+  }
+  
+  35% {
+     width: 100%;
+    /* left: 100%; */
+    /* left: auto; */
+    /* right: 0; */
+    /* right: 0; */
+    /* opacity: 1; */
+  }
+  
+  46% {
+    left: auto;
+    right: 0;
+    width: 0;
+    opacity:0;
+  }
+  
+  
+  to {
+    left: 0;
+    right: auto;
+    width: 0;
+    /* opacity:0; */
+    opacity: 0;
+  }
+}
+
+@keyframes ribbon-left {
+  from {
+    opacity: 1;
+    right: 0;
+    width: 0px;
+  }
+  
+  11% {
+    width: 100%;
+    right: 0;
+  }
+  
+  12% {
+    width: 100%;
+    /* left: 100%; */
+    /* left: auto; */
+    /* right: 0; */
+    /* opacity: 1; */
+  }
+  
+  35% {
+     width: 100%;
+    /* left: 100%; */
+    /* left: auto; */
+    /* right: 0; */
+    /* opacity: 1; */
+  }
+  
+  46% {
+    left: 0;
+    right: auto;
+    width: 0;
+    /* opacity:0; */
+  }
+  
+  to {
+    left: 0;
+    right: auto;
+    width: 0;
+    /* opacity:0; */
+    opacity: 1;
+  }
+}

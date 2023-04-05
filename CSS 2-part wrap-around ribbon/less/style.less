@@ -1,0 +1,83 @@
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* make things look nice */
+
+body {
+  background: #eee;
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: #555;
+}
+
+p { margin-top: 16px; }
+
+h1 a {
+  text-decoration: none;
+  color: #111;
+}
+
+
+/* article base */
+
+article {
+  width: 60%;
+  max-width: 720px;
+  margin: 48px auto;
+  padding: 48px;
+  background: #fff;
+  box-shadow: -3px 3px rgba(0, 0, 0, .1);
+}
+
+
+/* wrap-around */
+
+.wrap-around {
+  @color: red;
+  
+  position: relative;
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 24px 10px 48px;
+  margin-left: -48px;
+  background: @color;
+  color: #fff;
+  text-decoration: none;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    bottom: -3px;
+    width: 6px;
+    height: 44px;
+    background: darken(@color, 25%);
+    transform: skewY(-45deg);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: -6px;
+    width: 6px;
+    height: 6px;
+    background: darken(@color, 50%);
+    z-index: -1;
+  }
+  
+  &:hover {
+    @color: lightblue;
+    
+    background: @color;
+    
+    &:before { background: darken(@color, 25%); }
+    
+    &:after { background: darken(@color, 50%); }
+  }
+}

@@ -1,0 +1,125 @@
+.section{
+	width: 900px;
+	height: 420px;
+	margin: 20px auto;
+	position: relative;
+}
+/* Message to show when border-radius is not supported */
+.message{
+	display: none;
+	text-align: center;
+	font-weight: bold;
+	color: #000;
+	font-size: 20px;
+	font-style: italic;
+	padding-bottom: 20px;
+}
+.no-borderradius .message{
+	display: block;
+}
+/* Box with dashed border to show the bounding box of the circle */
+.normal-trigger-area{
+	width: 420px;
+    height: 420px;
+	position: absolute;
+    left: 0px;
+    top: 0px;
+	border: 1px dashed #916d57;
+	background: rgba(179,143,121,0.1);
+	-webkit-box-shadow: 0 0 0 1px rgba(255,255,255,0.5);
+	-moz-box-shadow: 0 0 0 1px rgba(255,255,255,0.5);
+	box-shadow: 0 0 0 1px rgba(255,255,255,0.5);
+}
+/* The circle */
+.ec-circle{
+    width: 420px;
+    height: 420px;
+	-webkit-border-radius: 210px;
+	-moz-border-radius: 210px;
+	border-radius: 50%;
+	text-align: center;
+    overflow: hidden;
+	font-family:'Kelly Slab', Georgia, serif;
+    background: #dda994 url(../images/1.jpg) no-repeat center center;
+	-webkit-box-shadow: 
+        inset 0 0 1px 230px rgba(0,0,0,0.6),
+		inset 0 0 0 7px #d5ad94;
+	-moz-box-shadow: 
+        inset 0 0 1px 230px rgba(0,0,0,0.6),
+		inset 0 0 0 7px #d5ad94;
+	box-shadow: 
+        inset 0 0 1px 230px rgba(0,0,0,0.6),
+		inset 0 0 0 7px #d5ad94;
+	-webkit-transition: box-shadow 400ms ease-in-out;
+	-moz-transition: box-shadow 400ms ease-in-out;
+	-o-transition: box-shadow 400ms ease-in-out;
+	-ms-transition: box-shadow 400ms ease-in-out;
+	transition: box-shadow 400ms ease-in-out;
+	/*For IE < 9 so that we have some kind of effect */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	display: block;
+	outline: none;
+}
+.ec-circle-hover{
+	-webkit-box-shadow: 
+		inset 0 0 0 0 rgba(0,0,0,0.6),
+		inset 0 0 0 20px #c18167,
+		0 0 10px rgba(0,0,0,0.3);
+	-moz-box-shadow: 
+		inset 0 0 0 0 rgba(0,0,0,0.6),
+		inset 0 0 0 20px #c18167,
+		0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 
+		inset 0 0 0 0 rgba(0,0,0,0.6),
+		inset 0 0 0 20px #c18167,
+		0 0 10px rgba(0,0,0,0.3);
+	/*For IE < 9 so that we have some kind of effect */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+/* Text inside of circle */
+.ec-circle h3{
+	color: transparent;
+    font-size: 66px;
+	line-height: 420px;
+    text-shadow: 0px 0px 100px #fff;
+	text-transform: uppercase;
+    -webkit-transition: text-shadow 400ms ease-in-out;
+	-moz-transition: text-shadow 400ms ease-in-out;
+	-o-transition: text-shadow 400ms ease-in-out;
+	-ms-transition: text-shadow 400ms ease-in-out;
+	transition: text-shadow 400ms ease-in-out;
+}
+.ec-circle-hover h3{
+	text-shadow: 0px 0px 1px #fff;
+}
+/* Content on the right side */
+.content{
+	width: 420px;
+	float: right;
+}
+.content a{
+	color: #c18167;
+	font-weight: bold;
+}
+.content a:hover{
+	color: #000;
+}
+.content p{
+	padding: 10px 0px;
+	font-size: 16px;
+	line-height: 26px;
+	font-family: Georgia, serif;
+	font-style: italic;
+	color: #333;
+	text-shadow: 0px 1px 1px #fff;
+}
+.content h1{
+	font-family:'Kelly Slab', Georgia, serif;
+    font-size: 46px;
+	padding-bottom: 10px;
+	color: #c18167;
+	text-shadow: 2px 1px 2px rgba(0,0,0,0.2), 0px 0px 1px #fff;
+}
+.content h1 span{
+	font-size: 22px;
+}

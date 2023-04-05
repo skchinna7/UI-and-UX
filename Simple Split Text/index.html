@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Simple Split Text - CodePen</title>
+
+    <style>
+@import url(http://fonts.googleapis.com/css?family=Limelight);
+@import url(http://fonts.googleapis.com/css?family=Kelly+Slab);
+
+body { background: #222; -webkit-backface-visibility: hidden; }
+.textTop,
+.textBottom {
+  transition-property: top, bottom, opacity;
+  transition-duration: 500ms, 500ms, 1s;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: 500ms, 500ms, 1s; 
+}
+
+.selectableText { opacity: 1; font-family: Limelight; color: #fff; text-transform: uppercase; transition-delay: 1s; transition-duration: 0;  }
+
+.underText { transition: all .5s ease-in-out; }
+
+.splitContainer { position: relative; margin: 5% auto 0 auto; font-size: 8em; text-align: center; height: 1em; }
+
+.splitContainer:hover .textTop { opacity: 1; bottom: 1em; transition-duration: 500ms, 500ms, 0; transition-delay: 0, 0, 0; }
+.splitContainer:hover .textBottom { opacity: 1; top: 1em; transition-duration: 500ms, 500ms, 0; transition-delay: 0, 0, 0; }
+.splitContainer:hover .underText { opacity: 1; transition-delay: .5s }
+.splitContainer:hover .selectableText { opacity: 0; transition-delay: 0; transition-duration: 0; }
+
+.splitText { position: absolute; left: 0; right: 0; font-family: Limelight; color: #fff; z-index: 2;}
+.textTop { opacity:0; height: 50%; overflow: hidden; -background: #f06d06; bottom: .5em; }
+.textTop span { height: 200%; text-transform: uppercase; }
+
+.textBottom { top: .5em; opacity:0; height: 50%; overflow: hidden; -background: #bada55; }
+.textBottom span { position: relative; bottom: .5em; height: 200%; text-transform: uppercase; }
+
+.underText {opacity: 0; position: absolute; top: 15%; right:0; left: 0; height: 1em; font-family: "Kelly Slab"; font-size: .75em; line-height:1em; color: #fff; text-transform: uppercase; }
+</style>
+
+    <script src="js/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="splitContainer">
+  <div class="selectableText">
+    Surprises
+  </div>
+  <div class="splitText textTop">
+    <span>
+      Surprises
+    </span>
+  </div>
+  <div class="splitText textBottom">
+    <span>
+      Surprises
+    </span>
+  </div>
+  <div class="underText">
+    Everywhere
+  </div>
+</div>
+
+</body>
+
+</html>

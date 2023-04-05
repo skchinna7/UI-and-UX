@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'uiconsBusinessFinance';
+  src: url('http://www.tabataruiz.com.br/exemplos_html/fonts/Uicons_Business_and_Finance.ttf') format('truetype');
+}
+.box {
+  position: relative;
+  margin-top: 40px;
+  margin-left: 40%;
+  height: 220px;
+  width: 180px;
+  border: solid 1px #BCBCBC;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  background-image: -moz-linear-gradient(top, #fefefe, #f0f0f0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#f0f0f0));
+  background-image: -webkit-linear-gradient(top, #fefefe, #f0f0f0);
+  background-image: -o-linear-gradient(top, #fefefe, #f0f0f0);
+  background-image: linear-gradient(to bottom, #fefefe, #f0f0f0);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffefefe', endColorstr='#fff0f0f0', GradientType=0);
+}
+.box:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 180px;
+  height: 4px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  z-index: -1;
+}
+.ribbon {
+  position: absolute;
+  width: 26px;
+  height: 25px;
+  background: #3981CB;
+  text-align: center;
+  top: -5px;
+  left: 5px;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  border: solid 1px #11273E;
+}
+.ribbon:after,
+.ribbon:before {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 0;
+}
+.ribbon:after {
+  border-width: 0px 13px 12px 13px;
+  border-color: transparent #3981CB;
+  bottom: -12px;
+  left: 0;
+  z-index: 1;
+}
+.ribbon:before {
+  border-width: 0px 14px 15px 14px;
+  border-color: transparent #11273E;
+  bottom: -15px;
+  left: -1px;
+  z-index: 0;
+}
+.ribbon a {
+  line-height: 22px;
+  color: #11273E;
+  text-decoration: none;
+  font-size: 18px;
+}
+.ribbon a:before {
+  content: "e";
+  font-family: 'uiconsBusinessFinance';
+  -webkit-font-smoothing: antialiased;
+}
+.border-ribbon {
+  border-top: dashed 1px #11273E;
+  border-bottom: dashed 1px rgba(255, 255, 255, 0.3);
+  border-opacity: 0.1;
+  margin: 3px 3px 0 3px;
+}

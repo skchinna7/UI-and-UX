@@ -1,0 +1,88 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font: 150%/1.5 "Times New Roman", times, serif;
+  background: #192238;
+  text-align: center;
+}
+
+.row {
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.block {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+  position: relative;
+}
+
+h1 {
+  position: relative;
+  display: inline-block;
+  font-family: "Times New Roman", times, serif;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+h1:after, h1:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  bottom: -.5em;
+  width: 1em;
+  height: 100%;
+  background-color: #69c48d;
+  pointer-events: none;
+}
+h1:after {
+  right: -.57em;
+  z-index: -1;
+}
+h1:before {
+  bottom: auto;
+  top: -.5em;
+  left: -.57em;
+  z-index: -1;
+}
+h1 a {
+  display: inline-block;
+  position: relative;
+  padding: .15em .75em;
+  text-decoration: none;
+  color: #192238;
+  background-color: #8ed2a9;
+}
+h1 a:after, h1 a:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -.5em;
+  left: -.05em;
+  pointer-events: none;
+  -webkit-mask: none;
+}
+h1 a:before {
+  bottom: auto;
+  top: -.5em;
+  border-bottom: 0.5em solid #398e5b;
+  border-left: .5em solid transparent;
+}
+h1 a:after {
+  left: auto;
+  right: -.05em;
+  border-top: 0.5em solid #398e5b;
+  border-right: .5em solid transparent;
+}

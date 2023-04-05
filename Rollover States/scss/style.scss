@@ -1,0 +1,308 @@
+@import "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+* {
+  box-sizing: border-box;
+}
+
+.rollovers {
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  
+  li {
+    position: relative;
+    display: inline-block;
+    width: 13em;
+    
+    a {
+      position: relative;
+      z-index: 1;
+      display: block;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1.25em;
+      text-decoration: none;
+      color: #000;
+      padding: 4.7em 1em 1em;
+    }
+  }
+}
+
+.icon_contain {
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 4.375em;
+  height: 4.375em;
+  transform: translateX(-50%);
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    fill: #fff;
+    width: 35%;
+    height: 35%;
+    transform: translate(-50%, -50%);
+    transition: fill 1s ease;
+  }
+}
+
+.logo {
+  position: absolute;
+  width: 4.375em;
+  height: 4.375em;
+  top: 3em;
+  left: 50%;
+  fill: #eb3f32;
+  transform: translateX(-50%);
+}
+
+.icon_contain::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 73%;
+  height: 73%;
+  opacity: 1;
+  background: #eb3f32;
+  border-radius: .125em;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.logo_reveal {
+  .icon_contain::before {
+     transition: opacity 1s ease;
+  }
+  
+  &:hover {
+    .icon_contain {
+      .icon {
+        fill: #eb3f32;
+      }
+      
+      &::before {
+        opacity: 0;
+      }
+    }  
+  }  
+}
+
+.logo_grow {
+  .logo {
+    transform: translateX(-50%) scale(0);
+    transition: transform 1s ease;
+  }
+  
+  .icon_contain::before {
+     transform: translate(-50%, -50%) rotate(45deg) scale(1);
+     transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  &:hover {
+    .logo {
+      transform: translateX(-50%) scale(1);  
+    }
+    
+    .icon_contain {
+      .icon {
+        fill: #eb3f32;
+      }
+      
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg) scale(0);
+        opacity: 0;
+      }
+    }  
+  }  
+}
+
+.logo_grow_alt {
+  .logo {
+    animation: grow_alt 1s reverse;
+    transform: translateX(-50%) scale(0);
+  }
+  
+  .icon_contain::before {
+     transform: translate(-50%, -50%) rotate(45deg) scale(1);
+     transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  &:hover {
+    .logo {
+      animation: grow_alt .7s ease-out;
+      transform: translateX(-50%) scale(1);
+    }
+    
+    .icon_contain {
+      .icon {
+        fill: #eb3f32;
+      }
+      
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg) scale(0);
+        opacity: 0;
+      }
+    }  
+  }  
+}
+
+@keyframes grow_alt {
+  0%   {
+    transform: translateX(-50%) scale(0);
+  }
+  80% { 
+    transform: translateX(-50%) scale(1.2);
+  }
+  100% { 
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.logo_rotate {
+  .logo {
+    transform: translateX(-50%) rotate(90deg) ;
+    transition: transform 1s ease;
+  }
+  
+  .icon_contain::before {
+     transform: translate(-50%, -50%) rotate(45deg);
+     transition: opacity .5s ease, transform .5s ease;
+  }
+  
+  &:hover {
+    .logo {
+      transform: translateX(-50%) rotate(0);  
+    }
+    
+    .icon_contain {
+      .icon {
+        fill: #eb3f32;
+      }
+      
+      &::before {
+        transform: translate(-50%, -50%) rotate(135deg);
+        opacity: 0;
+      }
+    }  
+  }  
+}
+
+.logo_rotate_alt {
+  .logo {
+    animation: rotate_alt 1s reverse;
+    transform: translateX(-50%) scale(0);
+  }
+  
+  .icon_contain::before {
+     transform: translate(-50%, -50%) rotate(45deg) scale(1);
+     transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  &:hover {
+    .logo {
+      animation: rotate_alt .7s ease-out;
+      transform: translateX(-50%) scale(1);
+    }
+    
+    .icon_contain {
+      .icon {
+        fill: #eb3f32;
+      }
+      
+      &::before {
+        transform: translate(-50%, -50%) rotate(135deg) scale(0);
+        opacity: 0;
+      }
+    }  
+  }  
+}
+
+@keyframes rotate_alt {
+  0%   {
+    transform: translateX(-50%) rotate(90deg) scale(0);
+  }
+  80% { 
+    transform: translateX(-50%) rotate(-15deg) scale(1.2);
+  }
+  100% { 
+    transform: translateX(-50%) rotate(0) scale(1);
+  }
+}
+
+.logo_grow_rotate {
+  .logo {
+    transform: translateX(-50%) rotate(90deg) scale(0);
+    transition: transform 1s ease;
+  }
+  
+  .icon_contain::before {
+     transform: translate(-50%, -50%) rotate(45deg) scale(1);
+     transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  &:hover {
+    .logo {
+      transform: translateX(-50%) rotate(0) scale(1);  
+    }
+    
+    .icon_contain {
+      .icon {
+        fill: #eb3f32;
+      }
+      
+      &::before {
+        transform: translate(-50%, -50%) rotate(135deg) scale(0);
+        opacity: 0;
+      }
+    }  
+  }  
+}
+
+.grid li {
+  width: 50%;
+  padding: 3em 0;
+  float: left;
+  border-right: 1px solid rgba(0,0,0, .25);
+  border-bottom: 1px solid rgba(0,0,0, .25);
+}
+
+.grid li:nth-child(2n) {
+  border-right: none;
+}
+
+.grid li:last-child {
+  border-bottom: none;  
+}
+
+.grid li:nth-last-child(2) {
+  border-bottom: none;  
+}
+
+@media ( min-width: 45em ) {
+  .grid li {
+    width: 33.333333%;
+  }
+  
+  .grid li:nth-child(2n) {
+    border-right: 1px solid rgba(0,0,0, .25);
+  }
+  
+  .grid li:nth-child(3) {
+    border-right: none;
+  }
+
+  .grid li:last-child {
+    border-right: none;
+    border-bottom: none;  
+  }
+
+  .grid li:nth-last-child(2), .grid li:nth-last-child(3) {
+    border-bottom: none;  
+  }
+}

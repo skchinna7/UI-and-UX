@@ -1,0 +1,47 @@
+body {
+  background: #666;
+}
+
+.box {
+  width: 75%;
+  padding: 25px 10px;
+  margin: 0 auto;
+  background: #eee;
+}
+
+h1 {
+  clear: both;
+  position: relative;
+  color: #fff;
+  background: #cc0000;
+  font-size: 2em;
+  margin: 0 -20px 20px -20px;
+  padding: 0.5em 20px;
+  text-shadow: 0 -1px #990000, 0 1px #660000;
+  -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+h1:before,
+h1:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+  border-top: 10px solid maroon;
+  border-left: 10px solid transparent;
+  background: transparent;
+}
+
+h1:after {
+  right: 0;
+  left: auto;
+  border-top: 10px solid maroon;
+  border-right: 10px solid transparent;
+}

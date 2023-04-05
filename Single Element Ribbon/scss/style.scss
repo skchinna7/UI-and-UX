@@ -1,0 +1,46 @@
+@import "compass/css3";
+
+$color:#aa1133;
+
+.ribbon{
+  width:100%;
+  font-size:1.5em;
+  margin-bottom:1.25em;
+  
+  color:white;
+  text-shadow:0px 1px 3px rgba(0,0,0,0.75);
+  box-shadow:0px 5px 7px -5px #432;
+  
+  /* important stuff*/
+  box-sizing:border-box;
+  padding:0em;
+  line-height:0em;
+  border-color: $color transparent;
+  border-style:solid;
+  border-width:1em;
+}
+
+
+
+.wrapper{
+  width:100%;
+  max-width:30em;
+  margin:2.5em;
+  padding:2.5em;
+  background-color:#f9f4f0;
+  text-align:center;
+  font-family:'Gill Sans', Gill Sans, sans-serif;
+  
+  p{
+   font-size:1.1em;
+   text-align:left;
+   line-height:1.25em;
+   margin-bottom:1.25em;
+    color:#414240;
+  }
+  
+  a{
+    color:$color;  
+  }
+}
+

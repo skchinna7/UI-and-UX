@@ -1,0 +1,516 @@
+/**********************
+ * Begin setup mixins for use later
+ */
+/**
+ * Shade Mixin
+ * https://github.com/DarbyBrown/Shade
+ */
+/***************************************
+ * Begin Actual Styles
+ */
+body {
+  font-family: 'Titillium Web';
+  background: #888;
+}
+
+h1 {
+  position: relative;
+  width: 618px;
+  height: 232px;
+  margin: .2em auto 0;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 76px;
+  text-transform: uppercase;
+  color: #222;
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  text-shadow: 1.06066px 1.06066px 0 #cac1a6, 2.12132px 2.12132px 0 #cac1a6, 3.18198px 3.18198px 0 #cac1a6;
+}
+h1 > div .design,
+h1 > div .illustration {
+  position: absolute;
+  width: 344px;
+  height: 96px;
+}
+h1 > div .design .text,
+h1 > div .illustration .text {
+  position: relative;
+  z-index: 100;
+}
+h1 > div .design {
+  top: 0;
+  right: 272px;
+}
+h1 > div .design .text {
+  padding-left: 96px;
+}
+h1 > div .design .spare1 {
+  position: absolute;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 376px;
+  height: 80px;
+  z-index: 5;
+  overflow: hidden;
+  bottom: 0;
+  z-index: 5;
+}
+h1 > div .design .spare1:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 320px;
+  height: 100%;
+  background: #0b2336;
+  left: 56px;
+}
+h1 > div .design .spare1:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #0b2336;
+  top: 50%;
+  margin-top: -40px;
+  left: 18px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  box-shadow: -1.06066px -1.06066px 0 #0b2336, -2.12132px -2.12132px 0 #0b2336, -3.18198px -3.18198px 0 #0b2336, -4.24264px -4.24264px 0 #0b2336, -5.3033px -5.3033px 0 #0b2336, -6.36396px -6.36396px 0 #0b2336, -7.42462px -7.42462px 0 #0b2336, -8.48528px -8.48528px 0 #0b2336, -9.54594px -9.54594px 0 #0b2336, -10.6066px -10.6066px 0 #0b2336, -11.66726px -11.66726px 0 #0b2336;
+}
+h1 > div .design .spare2 {
+  position: absolute;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 376px;
+  height: 80px;
+  z-index: 5;
+  overflow: hidden;
+  top: 0;
+  z-index: 10;
+}
+h1 > div .design .spare2:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 320px;
+  height: 100%;
+  background: #eeece0;
+  left: 56px;
+}
+h1 > div .design .spare2:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #eeece0;
+  top: 50%;
+  margin-top: -40px;
+  left: 18px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+h1 > div .design .spare2 div {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: #cac1a6;
+}
+h1 > div .design .spare2 div:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background: #eeece0;
+  bottom: 16px;
+  left: 16px;
+}
+h1 > div .design .spare3 {
+  position: absolute;
+  top: 0;
+  right: -32px;
+  z-index: 5;
+  width: 40px;
+  height: 80px;
+  -moz-transform: skew(-15deg, 0);
+  -ms-transform: skew(-15deg, 0);
+  -webkit-transform: skew(-15deg, 0);
+  transform: skew(-15deg, 0);
+  -webkit-transform-origin: bottom left;
+  -moz-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  transform-origin: bottom left;
+  background: #eeece0;
+}
+h1 > div .design .spare3:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 84px;
+  background: #cac1a6;
+  top: 0;
+  right: -15px;
+  -moz-transform: skew(0, 40deg);
+  -ms-transform: skew(0, 40deg);
+  -webkit-transform: skew(0, 40deg);
+  transform: skew(0, 40deg);
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+h1 > div .design .spare3:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 48px;
+  height: 16px;
+  background: #0b2336;
+  bottom: -16px;
+  right: -15px;
+  -moz-transform: skew(45deg, 0);
+  -ms-transform: skew(45deg, 0);
+  -webkit-transform: skew(45deg, 0);
+  transform: skew(45deg, 0);
+  -webkit-transform-origin: bottom left;
+  -moz-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  transform-origin: bottom left;
+}
+h1 > div .illustration {
+  bottom: 0;
+  right: 0;
+  text-align: right;
+}
+h1 > div .illustration .text {
+  padding-right: 96px;
+}
+h1 > div .illustration .spare1 {
+  position: absolute;
+  right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 376px;
+  height: 80px;
+  z-index: 5;
+  overflow: hidden;
+  bottom: 0;
+  z-index: 5;
+}
+h1 > div .illustration .spare1:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 320px;
+  height: 100%;
+  background: #0b2336;
+  right: 56px;
+}
+h1 > div .illustration .spare1:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #0b2336;
+  top: 50%;
+  margin-top: -40px;
+  right: 18px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  /* Making color solid
+      $shadow: $shadow, $i*$x $i*$y 0 hsla(hue($color) , saturation($color), (lightness($color) - ($i * $darken)), 1 - ($i * $opacify));
+  */
+  box-shadow: -1.06066px -1.06066px 0 #0b2336, -2.12132px -2.12132px 0 #0b2336, -3.18198px -3.18198px 0 #0b2336, -4.24264px -4.24264px 0 #0b2336, -5.3033px -5.3033px 0 #0b2336, -6.36396px -6.36396px 0 #0b2336, -7.42462px -7.42462px 0 #0b2336, -8.48528px -8.48528px 0 #0b2336, -9.54594px -9.54594px 0 #0b2336, -10.6066px -10.6066px 0 #0b2336, -11.66726px -11.66726px 0 #0b2336;
+}
+h1 > div .illustration .spare2 {
+  position: absolute;
+  right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 376px;
+  height: 80px;
+  z-index: 5;
+  overflow: hidden;
+  top: 0;
+  z-index: 10;
+}
+h1 > div .illustration .spare2:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 320px;
+  height: 100%;
+  background: #eeece0;
+  right: 56px;
+}
+h1 > div .illustration .spare2:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #eeece0;
+  top: 50%;
+  margin-top: -40px;
+  right: 18px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+h1 > div .illustration .spare2 div {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background: #cac1a6;
+}
+h1 > div .illustration .spare2 div:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background: #eeece0;
+  bottom: 16px;
+  right: 16px;
+}
+h1 > div .illustration .spare3 {
+  position: absolute;
+  top: 0;
+  left: -32px;
+  z-index: 5;
+  width: 40px;
+  height: 80px;
+  -moz-transform: skew(15deg, 0);
+  -ms-transform: skew(15deg, 0);
+  -webkit-transform: skew(15deg, 0);
+  transform: skew(15deg, 0);
+  -webkit-transform-origin: bottom right;
+  -moz-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
+  transform-origin: bottom right;
+  background: #eeece0;
+}
+h1 > div .illustration .spare3:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 84px;
+  background: #cac1a6;
+  top: 0;
+  left: -15px;
+  -moz-transform: skew(0, -40deg);
+  -ms-transform: skew(0, -40deg);
+  -webkit-transform: skew(0, -40deg);
+  transform: skew(0, -40deg);
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
+}
+h1 > div .illustration .spare3:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 48px;
+  height: 16px;
+  background: #0b2336;
+  bottom: -16px;
+  left: -15px;
+  -moz-transform: skew(-45deg, 0);
+  -ms-transform: skew(-45deg, 0);
+  -webkit-transform: skew(-45deg, 0);
+  transform: skew(-45deg, 0);
+  -webkit-transform-origin: bottom right;
+  -moz-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
+  transform-origin: bottom right;
+}
+h1 .bar {
+  position: absolute;
+  top: 86px;
+  right: 243px;
+  width: 88px;
+  height: 146px;
+  -moz-transform: rotate(39deg);
+  -ms-transform: rotate(39deg);
+  -webkit-transform: rotate(39deg);
+  transform: rotate(39deg);
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
+  box-shadow: 16px 0 0 #0b2336;
+  background: #706b5c;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Titillium WebThin"), local("TitilliumWeb-Thin"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr-E6O57bqL2WtN4biLacgeg.woff) format("woff");
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Titillium WebLight"), local("TitilliumWeb-Light"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr2-jEQ7ixT9mykCZ8BBatAk.woff) format("woff");
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Titillium Web"), local("TitilliumWeb-Regular"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/7XUFZ5tgS-tD6QamInJTcdASgiSiazNVaMZaV9DKExs.woff) format("woff");
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Titillium WebSemiBold"), local("TitilliumWeb-SemiBold"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr2gCgcskKIFo40ndTrcdCiA.woff) format("woff");
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Titillium WebBold"), local("TitilliumWeb-Bold"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr_fb5Q4ZioEX5fLPE_o-1oM.woff) format("woff");
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Titillium WebBlack"), local("TitilliumWeb-Black"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr1D_gR9ziCIb2bLb6UF6jDM.woff) format("woff");
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 200;
+  src: local("Titillium WebThin Italic"), local("TitilliumWeb-ThinItalic"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/RZunN20OBmkvrU7sA4GPPlDg4TuxMtsZ0wbII6ymf28.woff) format("woff");
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 300;
+  src: local("Titillium WebLight Italic"), local("TitilliumWeb-LightItalic"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/RZunN20OBmkvrU7sA4GPPnIu3i5KhThI9r_JXVTVbEo.woff) format("woff");
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Titillium WebItalic"), local("TitilliumWeb-Italic"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/r9OmwyQxrgzUAhaLET_KOx8qa_L3FxsPN3YZsknOt2E.woff) format("woff");
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 600;
+  src: local("Titillium WebSemiBold Italic"), local("TitilliumWeb-SemiBoldItalic"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/RZunN20OBmkvrU7sA4GPPgBjfk66F-VJc8CAlorrYAk.woff) format("woff");
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: italic;
+  font-weight: 700;
+  src: local("Titillium WebBold Italic"), local("TitilliumWeb-BoldItalic"), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/RZunN20OBmkvrU7sA4GPPhR2GJzKq3w6YIk4L0L9zPA.woff) format("woff");
+}

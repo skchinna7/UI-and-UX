@@ -1,0 +1,40 @@
+@import "compass/css3";
+
+html * {
+ box-sizing: border-box; 
+}
+
+#ribbon {
+  position: relative;
+  margin: 0 auto;
+  height: 10em;
+  width: 10em;
+  background-color: red;
+  
+  &:before {
+    content:"";
+    position: absolute;
+    top: 50%;
+    border-style: solid;
+    border-width: 80px;
+    border-color: red red transparent red;
+    z-index: -1;
+  }
+}
+
+#figure {
+  width: 87%;
+  height: 140%;
+  margin: 0 auto;
+  border-left:  2px dotted darkred;
+  border-right: 2px dotted darkred;
+  padding-top: 50px;
+  text-align: center;
+  
+  &:before {
+    content: "Put your image or content here!";
+    color: white;
+    text-shadow: 0 1px 0 black;
+  }
+}
+

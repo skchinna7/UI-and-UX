@@ -1,0 +1,60 @@
+/* VARIABLES */
+$color = #4FC1E9
+$font = 'Open Sans', sans-serif
+
+/* CUSTOM MIXINS */
+absolutePos(topPos, rightPos)
+	content ""
+	position absolute
+	top topPos
+	right rightPos
+
+font()
+	font-family $font
+	font-weight lighter
+	font-size 25px
+	color #fff
+	
+size(h, w)
+	height h
+	width w
+
+skewed(deg)
+	-ms-transform skewY(deg)
+	-webkit-transform skewY(deg)
+	transform skewY(deg)
+
+/* BANNER STYLES */
+.banner
+	position relative
+	size 60px, 310px
+	margin 100px auto
+	background $color + 20
+	font()
+	&::before
+		absolutePos -16px, 0
+		size 60px, 90px
+		skewed 20deg
+		background $color - 5
+	&::after
+		absolutePos -32px, 20px
+		size 60px, 70px
+		background $color + 30
+	span
+		display block
+		padding-top 10px
+		&::before
+			absolutePos 50px, 180px
+			size 60px, 170px
+			background $color - 14
+			z-index -9
+		&::after
+			absolutePos 60px, 180px
+			border-top 0px solid transparent
+			border-bottom 50px solid transparent
+			border-right 130px solid $color - 5
+			
+body
+	font-family $font
+	text-align center
+	color #ddd

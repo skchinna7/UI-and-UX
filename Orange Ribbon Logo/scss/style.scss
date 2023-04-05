@@ -1,0 +1,112 @@
+@import "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+
+body {
+  background-color: #efefef;
+  color: #444;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 40px;
+}
+
+.single-title {
+  margin-bottom: 20px;
+  
+  img {
+    @include border-radius(4px);
+    
+    float: left;
+    height: 48px;
+    margin-right: 8px;
+    width: 48px;
+  }
+  
+  h1 {
+    font-size: 19px;
+    line-height: 20px;
+    margin: 0 0 5px 0;
+  }
+  
+  .byline {
+    color: #999;
+    font-size: 12px;
+  }
+  
+  .post-date {
+    margin-left: 8px; 
+  }
+  
+  a {
+    color: #4083A9;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+div.shot {
+  background-color: #afe2e2;
+  border: 20px solid white;
+  color: white;
+  clear: both;
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6em;
+  height: 300px;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 3px 0 #bc5e19;
+  width: 400px;
+  
+    span:after {
+      background-color: #f97d22;
+      content: "";
+      display: block;
+      height: 74px;
+      position: relative;
+      width: 156px;
+      top: -74px;
+      z-index: -10;
+    }
+    span:before {
+      background-color: #bc5e19;
+      content: "";
+      display: block;
+      height: 156px;
+      width: 74px;
+      position: absolute;
+      right: 41px;
+      top: 2px;
+      -webkit-transform: rotate(90deg) skew(29deg);
+      -moz-transform: rotate(90deg) skew(29deg);
+      -o-transform: rotate(90deg) skew(29deg);
+      -ms-transform: rotate(90deg) skew(29deg);
+      transform: rotate(90deg) skew(29deg);
+      z-index: -20;
+    }
+  
+  span {
+      @include box-shadow(4px 5px 0 darken(#afe2e2, 12%));
+    
+    background-color: transparent;
+    display: block;
+    height: 74px;
+    line-height: 74px;
+    margin: 0 auto 14px;
+    text-align: center;
+    width: 156px;
+    -webkit-transform: rotate(-11deg) skew(-11deg);
+    -moz-transform: rotate(-11deg) skew(-11deg);
+    -o-transform: rotate(-11deg) skew(-11deg);
+    -ms-transform: rotate(-11deg) skew(-11deg);
+    transform: rotate(-11deg) skew(-11deg);
+    position: relative;
+    z-index: 10;
+    
+    &:first-child {
+      margin-top: 24px;
+    }
+    &:last-child:before {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+body {background-color: #5CB85C}
+h2 {padding-top: 25px}
+
+.ribbon-right > div, .ribbon-right ul li {float: left}
+
+.ribbon-left
+{
+	position: relative;
+	z-index: 100;
+	left: 0;
+	height: 80px;
+	font-size: 1.3em;
+	font-weight: bold;
+	padding: 0 20px 0;
+	margin: 30px 10px 10px ;
+	color: #555;
+	background-color: #fff;
+	-webkit-box-shadow: 0px 2px 4px #888;
+	-moz-box-shadow: 0px 2px 4px #888;
+	box-shadow: 0px 4px 4px #888;
+}
+
+.ribbon-left:after
+{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+	top: 100%;
+	border-width: 5px 10px;
+	border-style: solid;
+	border-color: #666 #666 transparent transparent;
+}
+
+.ribbon-left:before
+{
+	content: ' ';
+	position: absolute;
+	width: 70px;
+	height: 0;
+	left: -50px;
+	top: 12px;
+	border-width: 39px 20px;
+	border-style: solid;
+	border-color: #fff #fff #fff transparent;
+	box-shadow: 0 6px 4px -5px #888;
+}
+
+.ribbon-right:after
+{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 0px;
+	top: 100%;
+	border-width: 5px 10px;
+	border-style: solid;
+	border-color: #666 transparent transparent #666;
+}
+
+.ribbon-right:before
+{
+	content: ' ';
+	position: absolute;
+	width: 70px;
+	height: 0;
+	right: -50px;
+	top: 12px;
+	border-width: 39px 20px;
+	border-style: solid;
+	border-color: #fff transparent #fff #fff;
+	box-shadow: 0 6px 4px -5px #888;
+}
+
+.ribbon-borda-esquerda 
+{
+	height: 80px;
+	border-right: 1px solid #eee;
+	position: relative;
+	left: -21px;
+}
+
+.ribbon-borda-direita 
+{
+	height: 80px;
+	border-right: 1px solid #eee;
+	position: relative;
+	top: -68px;
+	right: -21px;
+}

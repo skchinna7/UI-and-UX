@@ -1,0 +1,265 @@
+body {
+	font-family: 'Lucida Grande', 'Helvetica Neue', sans-serif;
+	font-size: 13px;
+	height: 100%;
+}
+
+/*
+	jQuery Logo
+*/
+
+#jquery_container {
+	background: #0F1923;
+	border: solid 1px #ccc;
+	
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	
+	list-style: none;
+	font-size: 12px;
+	padding: 2em;
+	position: relative;
+	
+	width: 20em;
+	height: 20em;
+	overflow: hidden;
+	margin: 0;
+}
+
+#jquery {
+	position: relative;
+	width: 20em;
+	height: 20em;
+	margin: 0 auto;
+	-webkit-transform: rotate(-54deg) scale(1,0.92);
+	-moz-transform: rotate(-54deg) scale(1,0.92);
+	-ms-transform: rotate(-54deg) scale(1,0.92);
+	-o-transform: rotate(-54deg) scale(1,0.92);
+	transform: rotate(-54deg) scale(1,0.92);
+}
+
+#large, #med, #small {
+	-webkit-transform: scale(0.77, 1);
+	-moz-transform: scale(0.77, 1);
+	-ms-transform: scale(0.77, 1);
+	-o-transform: scale(0.77, 1);
+	transform: scale(0.77, 1);
+}
+
+#large {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 13em;
+	height: 20em;
+	background: #1EA2C9;
+}
+
+#large, #large:before {
+	-webkit-border-radius: 10em 0 0 10em;
+	-moz-border-radius: 10em 0 0 10em;
+	border-radius: 10em 0 0 10em;
+}
+
+#large:before {
+	display: block;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #0F1923;
+	position: relative;
+	left: 4em;
+}
+
+#med {
+	position: absolute;
+	top: 3.2em;
+	left: 7em;
+	display: block;
+	width: 9.5em;
+	height: 14em;
+	-webkit-border-radius: 7em 0 0 7em;
+	-moz-border-radius: 7em 0 0 7em;
+	border-radius: 7em 0 0 7em;
+	background: #1EA2C9;
+    }
+    
+#med, #med:before {
+	-webkit-border-radius: 7em 0 0 7em;
+	-moz-border-radius: 7em 0 0 7em;
+	border-radius: 7em 0 0 7em;
+}
+
+#med:before {
+	display: block;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #0F1923;
+	position: relative;
+	left: 3.2em;
+}
+
+#small {
+	position: absolute;
+	top: 6em;
+	left: 13em;
+	display: block;
+	width: 6em;
+	height: 9em;
+	-webkit-border-radius: 4.5em 0 0 4.5em;
+	-moz-border-radius: 4.5em 0 0 4.5em;
+	border-radius: 4.5em 0 0 4.5em;
+	background: #1EA2C9;
+}
+
+#small, #small:before {
+	-webkit-border-radius: 4.5em 0 0 4.5em;
+	-moz-border-radius: 4.5em 0 0 4.5em;
+	border-radius: 4.5em 0 0 4.5em;
+}
+
+#small:before {
+	display: block;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #0F1923;
+	position: relative;
+	left: 2.15em;
+}
+
+/*
+	jQuery UI Logo
+*/
+
+#jqueryui_container {
+	background: #0F1923;
+	border: solid 1px #ccc;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	list-style: none;
+	font-size: 12px;
+    padding: 2em;
+	position: relative;
+	
+	width: 20em;
+	height: 20em;
+	overflow: hidden;
+	margin: 0;
+}
+
+#jquery-ui {
+	background: #ff9700;
+	margin: 0 auto;
+	width: 18em;
+	height: 18em;
+	-webkit-border-radius: 1.5em 1.5em 10.5em 10.5em;
+	-moz-border-radius: 1.5em 1.5em 10.5em 10.5em;
+	border-radius: 1.5em 1.5em 10.5em 10.5em;
+	position: relative;
+	top: 3em;
+}
+
+#jquery-ui:before {
+	width: 5.8em;
+	height: 7em;
+	margin: 0 auto;
+	position: relative;
+	top: 4.7em;
+	content: "";
+	display: block;
+	border: solid 3.5em #fff;
+	border-top: none;
+	-webkit-border-radius: 0 0 7.8em 7.8em;
+	-moz-border-radius: 0 0 7.8em 7.8em;
+	border-radius: 0 0 7.8em 7.8em;
+	z-index: 10;
+}
+
+#jquery-ui:after {
+	width: 5em;
+	height: 5em;
+	background: #ff9700;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 4.2em;
+	left: 11em;
+	z-index: 20;
+}
+
+#jquery-ui .dot {
+	display: block;
+	height: 3.5em;
+	width: 3.5em;
+	background: #fff;
+	position: absolute;
+	z-index: 30;
+	top: 4em;
+	left: 12.2em;
+	-webkit-transform: rotate(14deg);
+	-moz-transform: rotate(14deg);
+	-ms-transform: rotate(14deg);
+	-o-transform: rotate(14deg);
+	transform: rotate(14deg);
+}
+
+/*
+	Fading Rotation Effect
+*/
+
+#rotate_fade{
+	width: 22.4em;
+	height: 22.4em;
+	overflow: hidden;
+	
+	-webkit-transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-ms-transition: all 1s linear;
+	-o-transition: all 1s linear;
+	transition: all 1s linear;
+	
+	position: relative;
+	margin: 20px auto;
+	text-align: left;
+}
+
+#rotate_fade:hover{
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+#jquery_container, #jqueryui_container {
+	-webkit-transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-ms-transition: all 1s linear;
+	-o-transition: all 1s linear;
+	transition: all 1s linear;
+}
+
+#rotate_fade #jquery_container{
+	opacity: 1;
+	position: absolute;
+	top: 0; left: 0;
+}
+
+#rotate_fade:hover #jquery_container{
+	opacity: 0;
+}
+
+#rotate_fade #jqueryui_container{
+	opacity: 0;
+	position: absolute;
+	top: 0; left: 0;
+}
+
+#rotate_fade:hover #jqueryui_container{
+	opacity: 1;
+}

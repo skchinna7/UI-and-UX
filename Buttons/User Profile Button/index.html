@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>User profile button</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>    
+    <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+       <script src="js/prefixfree.min.js"></script>
+  </head>
+  <body>
+    <h1 class="pen-title">User menu button</h1>
+<div class="pen-wrapper">
+  <div class="pen-wrapper__inner">
+    <nav class="nav">
+      <input type="checkbox" id="menu-button"  class="menu-button__input" />
+      <label for="menu-button" class="menu-button">
+        <span class="menu-button__icon">
+          <span class="menu-button__icon-strip"></span>
+        </span>
+      </label>
+      <div class="nav__inner">
+        <figure class="nav__avatar">
+          <img src="images/s.jpg" alt="" />
+        </figure>
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__url">
+              <svg class="icon nav-list__icon"><use xlink:href="#icon-star"></use></svg>
+            </a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__url">
+              <svg class="icon nav-list__icon"><use xlink:href="#icon-envelope"></use></svg>
+            </a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__url">
+              <svg class="icon nav-list__icon"><use xlink:href="#icon-cog"></use></svg>
+            </a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__url">
+              <svg class="icon nav-list__icon"><use xlink:href="#icon-user"></use></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="icon-star" viewBox="0 0 951 1024">
+      <title>star</title>
+      <path class="path1" d="M950.857 369.714q0 12.571-14.857 27.429l-207.429 202.286 49.143 285.714q0.571 4 0.571 11.429 0 12-6 20.286t-17.429 8.286q-10.857 0-22.857-6.857l-256.571-134.857-256.571 134.857q-12.571 6.857-22.857 6.857-12 0-18-8.286t-6-20.286q0-3.429 1.143-11.429l49.143-285.714-208-202.286q-14.286-15.429-14.286-27.429 0-21.143 32-26.286l286.857-41.714 128.571-260q10.857-23.429 28-23.429t28 23.429l128.571 260 286.857 41.714q32 5.143 32 26.286z"></path>
+    </symbol>
+    <symbol id="icon-envelope" viewBox="0 0 1024 1024">
+      <title>envelope</title>
+      <path class="path1" d="M512.48 603.552l-130.304-106.976-283.584 334.816h828.032l-283.616-338.144-130.528 110.304zM957.632 192.608h-890.080l445.056 374.336 445.024-374.336zM662.56 476.384l297.312 354.688v-606.464l-297.312 251.776zM64.128 224.608v606.464l297.312-354.688-297.312-251.776z"></path>
+    </symbol>
+    <symbol id="icon-cog" viewBox="0 0 1024 1024">
+      <title>cog</title>
+      <path class="path1" d="M863.68 595.68c68.992 51.424 128.128 98.496 128.128 98.496l-84.192 147.648-152.16-67.168-140.992 82.464c-9.536 86.944-18.272 166.88-18.272 166.88h-168.384l-18.688-167.392-138.944-82.656-153.824 67.904-84.16-147.648c0 0 58.144-46.848 126.976-98.112v-168.288l-126.976-97.92 84.16-147.68 150.144 66.816 149.056-80.864 12.256-168.16h168.384l12.192 167.456 147.008 82.496 152.256-67.776 84.192 147.68-128.128 98.272v167.552zM512 384c-70.688 0-128 57.312-128 128s57.312 128 128 128 128-57.312 128-128-57.312-128-128-128z"></path>
+    </symbol>
+    <symbol id="icon-user" viewBox="0 0 1024 1024">
+      <title>user</title>
+      <path class="path1" d="M0 1024v-96c0-143.488 180.768-197.728 419.168-219.584-52.352-32.448-93.44-123.648-114.848-196.48-0.096 0-0.192 0.064-0.32 0.064-2.176 0-48-57.312-48-128 0-62.016-4.416-113.728 32.224-125.44-0.032-0.864-0.224-1.696-0.224-2.56 0-78.624 40.672-147.52 101.984-187.488 15.84-39.52 64.128-68.512 122.016-68.512s106.176 28.992 122.016 68.512c61.312 39.968 101.984 108.864 101.984 187.488 0 0.864-0.192 1.696-0.224 2.56 36.64 11.712 32.224 63.424 32.224 125.44 0 70.688-50.816 128-48 128-0.128 0-0.224-0.064-0.32-0.064-21.408 72.8-62.496 164.032-114.848 196.48 238.4 21.856 419.168 74.080 419.168 219.584v96h-1024z"></path>
+    </symbol>
+  </defs>
+</svg>    
+        <script src="js/index.js"></script>
+  </body>
+</html>

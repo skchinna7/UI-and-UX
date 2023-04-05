@@ -1,0 +1,131 @@
+body {
+  background: #eee;
+}
+
+.content-wrap {
+  margin: 50px;
+  width: 25%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 90;
+  float: left;
+}
+.content-wrap article {
+  padding: 20px;
+}
+
+.ribbon-wrapper {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+}
+
+.ribbon-orange {
+  font-weight: bold;
+  font-family: Sans-Serif;
+  letter-spacing: 0.1em;
+  color: #333;
+  font-size: 15px;
+  text-align: center;
+  text-shadow: white 0px 1px 0px;
+  transform: rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 13px;
+  width: 120px;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#cbe37f), to(#bada55));
+  color: #202709;
+}
+.ribbon-orange:before, .ribbon-orange:after {
+  content: "";
+  /* Colour of the triangle. To flip the effect, use border-bottom. */
+  border-top: 3px solid #bada55;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  position: absolute;
+  bottom: -3px;
+  /* +1 to compensate for the border */
+}
+.ribbon-orange:before {
+  left: 0;
+}
+.ribbon-orange:after {
+  right: 0;
+}
+
+.ribbon-blue {
+  font-weight: bold;
+  font-family: Sans-Serif;
+  letter-spacing: 0.1em;
+  color: #333;
+  font-size: 15px;
+  text-align: center;
+  text-shadow: white 0px 1px 0px;
+  transform: rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 13px;
+  width: 120px;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d5e5f6), to(#aaccee));
+  color: #194c80;
+}
+.ribbon-blue:before, .ribbon-blue:after {
+  content: "";
+  /* Colour of the triangle. To flip the effect, use border-bottom. */
+  border-top: 3px solid #aaccee;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  position: absolute;
+  bottom: -3px;
+  /* +1 to compensate for the border */
+}
+.ribbon-blue:before {
+  left: 0;
+}
+.ribbon-blue:after {
+  right: 0;
+}
+
+.ribbon-pink {
+  font-weight: bold;
+  font-family: Sans-Serif;
+  letter-spacing: 0.1em;
+  color: #333;
+  font-size: 15px;
+  text-align: center;
+  text-shadow: white 0px 1px 0px;
+  transform: rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 13px;
+  width: 120px;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff3f5), to(pink));
+  color: #c00022;
+}
+.ribbon-pink:before, .ribbon-pink:after {
+  content: "";
+  /* Colour of the triangle. To flip the effect, use border-bottom. */
+  border-top: 3px solid pink;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  position: absolute;
+  bottom: -3px;
+  /* +1 to compensate for the border */
+}
+.ribbon-pink:before {
+  left: 0;
+}
+.ribbon-pink:after {
+  right: 0;
+}

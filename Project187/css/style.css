@@ -1,0 +1,63 @@
+/* VARIABLES */
+/* CUSTOM MIXINS */
+/* BANNER STYLES */
+.banner {
+  position: relative;
+  height: 60px;
+  width: 310px;
+  margin: 100px auto;
+  background: #63d5fd;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  font-size: 25px;
+  color: #fff;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  right: 0;
+  height: 60px;
+  width: 90px;
+  -ms-transform: skewY(20deg);
+  -webkit-transform: skewY(20deg);
+  transform: skewY(20deg);
+  background: #4abce4;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  top: -32px;
+  right: 20px;
+  height: 60px;
+  width: 70px;
+  background: #6ddfff;
+}
+.banner span {
+  display: block;
+  padding-top: 10px;
+}
+.banner span::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  right: 180px;
+  height: 60px;
+  width: 170px;
+  background: #41b3db;
+  z-index: -9;
+}
+.banner span::after {
+  content: "";
+  position: absolute;
+  top: 60px;
+  right: 180px;
+  border-top: 0px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 130px solid #4abce4;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  color: #ddd;
+}

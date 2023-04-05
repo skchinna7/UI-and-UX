@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Toggle Button</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/vue-material.js"></script>
+	<script src="js/switch.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main">
+			<button id="bDemo" value="Start animation">Start Animation</button>				<p id="p1">This is jQuery</p>
+			<div class="demo">
+
+			</div>
+		</div>
+	</div>
+	<div class="switch-wrapper">
+		<div class="md-switch">
+			<div class="md-switch-container">
+				<div class="md-switch-thumb togglebutton" style="transform: translate3d(-1px, -50%, 0px);">
+					<input type="checkbox" name="my-test0" id="my-test0" value="true">
+					<button class="md-switch-holder"></button>
+					<div class="md-ink-ripple"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="togglebutton" style="text-align: center;" id="switch-row">
+		<label>
+		 <input type="checkbox">
+ 			<!-- <span class="toggle"> 
+ 			</span>-->
+ 		</label>	
+	</div>
+	<!-- Markup -->
+<div id="sliderRegular" class="slider noUi-target noUi-ltr noUi-horizontal noUI-connect" style="top: 50px;">
+	<div class="noUi-base">
+		<div class="noUi-origin noUi-background" style="left: 40%;">
+			<div class="noUi-handle noUi-handle-lower"></div>
+		</div>
+	</div>
+</div>
+<div id="sliderDouble" class="slider slider-info noUi-target noUi-ltr noUi-horizontal noUi-background">
+	<div class="noUi-base">
+		<div class="noUi-origin noUI-connect" style="left: 20%;">
+			<div class="noUi-handle noUi-handle-lower"></div>
+		</div>
+		<div class="noUi-origin noUi-background" style="left: 60%">
+			<div class="noUi-handle noUi-handle-upper"></div>
+		</div>
+	</div>
+</div>
+
+<!-- Javascript -->
+<script>
+ $('#sliderRegular').noUiSlider({
+	start: 50,
+	connect: "lower",
+	range: {
+	    min: 0,
+	    max: 100
+	}
+});
+
+$('#sliderDouble').noUiSlider({
+	start: [20, 60] ,
+	connect: true,
+	range: {
+	    min: 0,
+	    max: 100
+	}
+}); -->	
+</script>	    	
+    <script>
+        var header_height;
+        var fixed_section;
+        var floating = false;
+
+        $().ready(function(){
+            suggestions_distance = $("#suggestions").offset();
+            pay_height = $('.fixed-section').outerHeight();
+
+			$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
+
+			// the body of this function is in assets/material-kit.js
+			materialKit.initSliders();
+        });
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.min.js"></script>   
+    <script src="js/material.min.js"></script>
+    <script src="js/material-kit.js"></script>
+    <script src="js/nouislider.min.js"></script>        
+</body>
+</html>

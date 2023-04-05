@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - CSS3D</title>
+
+  <style>
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+</style>
+
+    <style>
+html {
+  height: 100%;
+  font: 62.5%/1 "Lucida Sans Unicode","Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+  background: #f5f5f5 url(http://s.cdpn.io/79/light-beams.jpg) no-repeat center center;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrapper {
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 10em;
+  padding: 50px 0;
+}
+
+span { 
+  text-shadow: -0.06em 0 red,  0.06em 0 cyan; /* This creates the 3D effect, pretty easy, eh? */
+  letter-spacing: 0.08em; /* make sure the letters don't overlap */
+}
+
+p {
+  margin: 0;
+}
+
+/* ---------------- Stars ---------------- */
+
+#stars span {
+  display: inline-block;
+  transform: scale(1);
+  transition: transform 2s cubic-bezier(0, 1, 0, 1);
+}
+#stars span:hover {
+  cursor: crosshair;
+  transform: scale(1.3); /* This adds a hover effect */
+  transition: transform .2s cubic-bezier(0, 0.75, 0, 1);
+}
+#stars span:active {
+  text-shadow: none; /* Click to disable the 3D effect */
+}
+
+/* Below the stars animation */
+#stars span:nth-child(1), #stars span:nth-child(5) { font-size: 0.3em; animation-delay: 0.2s; }
+#stars span:nth-child(2), #stars span:nth-child(4) { font-size: 0.5em; animation-delay: 0.1s; }
+#stars span:nth-child(3) { font-size: 0.8em; animation-delay: 0s; }
+
+#stars span { animation: stars-animation 3s 50 ease-in-out; }
+
+@-webkit-keyframes stars-animation {
+  0% { transform: scale(1); }
+  90% { transform: scale(1); }
+  95% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+#stars:hover span {
+  animation: none; /* Disables the animation on hover */
+}
+
+/* ---------------- Title ---------------- */
+
+#title {
+  font-family: Helvetica, Geneva, sans-serif; /* Any font would work, but SansSerif looks better */
+}
+#title:focus {
+  outline: none;
+}
+#title span {
+  vertical-align: middle;
+  line-height: 1.5em;
+  transition: font-size 2s cubic-bezier(0, 1, 0, 1);
+}
+#title span:hover {
+  font-size: 1.5em; /* This adds a hover effect */
+  line-height: 1em;
+  transition: font-size .2s cubic-bezier(0, 0.75, 0, 1);
+}
+#title span:active {
+  font-size: 1em;
+  text-shadow: none; /* Click to disable the 3D effect */
+}
+#title span::selection {
+  background-color: red; /* This hides the selection */
+}
+
+/* ---------------- Slogan ---------------- */
+
+#slogan { font-size: 0.25em; }
+#slogan span:active { text-shadow: none; }
+
+/* Below just some styling for the meta info */
+
+#meta {
+  color: #777;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0 1px 0;
+  margin: 30px;
+}
+#meta strong { font-weight: bold; color: #000; }
+#meta p:first-child { margin-bottom: 20px; }
+#meta a { text-decoration: none; color: #7276ff; }
+#meta a:hover { color: rgba(114,118,255,0.5); }
+#meta img { vertical-align: text-bottom; }
+</style>
+
+    <script src="js/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+  <p id="stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></p>
+  <p id="title" contenteditable="true" spellcheck="false"><span>CSS</span><span>3</span><span>D</span></p>
+  <p id="slogan"><span>Popcorn</span> for your <span>text</span>.</p>
+
+</div>
+
+<div id="meta">
+  <a href="http://en.wikipedia.org/wiki/File:Anaglyph_glasses.png"><img src="http://s.cdpn.io/79/3D-glasses.png" alt="3D Glasses" /> 3D red-cyan glasses</a> recommended.</p>
+</div>
+
+</body>
+
+</html>

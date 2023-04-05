@@ -1,0 +1,117 @@
+  html {
+  	font-size:25px;
+	}
+	.basic { 
+		color:#fff;
+		position:relative;
+		background-color:#777;
+		width:508px; 
+		height:500px;	
+		top:150px;
+		margin:0 auto;
+		border:4px solid #333;
+	}
+	.ribbon {
+		background-color:#333;
+		position:relative;
+		padding:5px 5px 5px 30px;
+		top:50px;
+		left:-14px;
+		height:30px;
+		width:200px;
+	}
+	.ribbon:after {
+		display:block;
+		position:absolute;
+		content:"";
+		height:0;
+		width:0;
+		left:225px;
+		top:0;
+		border-top:20px solid #333;
+		border-right:20px solid transparent;
+		border-bottom:20px solid #333;
+		border-left:20px solid #333;
+	}
+	.ribbon:before {
+		display:block;
+		position:absolute;
+		content:"";
+		height:0;
+		width:0;
+		top:40px;
+		left:0px;
+		border-top:10px solid #555;
+		border-left:10px solid transparent;
+	}
+	.right-ribbon {
+		font-size:18px;
+		background-color:#333;
+		position:relative;
+		height:24px;
+		width:110px;
+		float:right;
+		text-align:center;
+		left:9px;
+		top:34px;
+		-webkit-transform:rotate(45deg);
+		-moz-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+	}
+	.right-ribbon:before {
+		display:block;
+		position:absolute;
+		content:"";
+		height:0;
+		width:0;
+		top:0;
+		left:-23px;
+		border-top:24px solid transparent;
+		border-right:24px solid #333;
+	}
+	.right-ribbon:after {
+		display:block;
+		position:absolute;
+		content:"";
+		height:0;
+		width:0;
+		top:0;
+		left:109px;
+	border-top:24px solid transparent;
+	border-left:24px solid #333;
+	}
+	
+	.center-ribbon {
+		text-align:center;
+		background-color:#666;
+		border:solid 4px #333;
+		position:relative;
+		padding:35px 0 0 0;
+		top:150px;
+		right:50px;
+		height:100px;
+		width:600px;
+	}
+	
+	.center-ribbon:before {
+		display:block;
+		position:absolute;
+		content:"";
+		height:0;
+		width:0;
+		left:-5px;
+		top:139px;
+	border-top:15px solid #555;
+	border-left:47px solid transparent;
+	}
+	.center-ribbon:after {
+		display:block;
+		position:absolute;
+		content:"";
+		height:0;
+		width:0;
+		right:-5px;
+		top:139px;
+	border-top:15px solid #555;
+	border-right:47px solid transparent;
+	}

@@ -1,0 +1,110 @@
+@import "compass/css3";
+
+$freshcolor	  : #47b372;
+$darkcolor 		: #192238;
+
+$basefont : "Times New Roman", times, serif;
+$basefontsize : 24;
+$baselineheight : 1.5;
+$baseline-unit: $basefontsize * $baselineheight;
+$basefontpercent: $basefontsize/16 * 100;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font: #{$basefontpercent}%/#{$baselineheight} $basefont ;
+  background: $darkcolor;
+  text-align: center;
+}
+
+.row {
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.block {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+  position: relative;
+}
+
+h1 {
+  position: relative;
+	display: inline-block;
+	font-family: $basefont;
+	font-weight: 500;
+	letter-spacing: 0.15em;
+	white-space: nowrap;
+	text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+
+	&:after,
+	&:before {
+		content: " ";
+		display: block;
+		position: absolute;
+		bottom: -.5em;
+		width: 1em;
+		height: 100%;
+		background-color: lighten($freshcolor,10);
+		pointer-events:none;
+	}
+
+	&:after {
+		right: -.57em;
+		z-index: -1;
+	}
+
+	&:before {
+		bottom: auto;
+		top: -.5em;
+		left: -.57em;
+		z-index: -1;
+	}
+
+	a {
+		display: inline-block;
+		position: relative;
+		padding: .15em .75em;
+		text-decoration: none;
+		color: darken($darkcolor,0);
+		background-color: lighten($freshcolor,20);
+
+
+		&:after,
+		&:before {
+			content: " ";
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 0;
+			bottom: -.5em;
+			left: -.05em;
+			pointer-events: none;
+			-webkit-mask: none;
+		}
+
+		&:before {
+			bottom: auto;
+			top: -.5em;
+			border-bottom: .5em solid darken($freshcolor,10);
+			border-left: .5em solid transparent;
+		}
+
+		&:after {
+			left:  auto;
+			right: -.05em;
+			border-top: .5em solid darken($freshcolor,10);
+			border-right: .5em solid transparent;
+		}
+	}
+
+}

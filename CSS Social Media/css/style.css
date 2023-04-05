@@ -1,0 +1,74 @@
+html, body {
+  margin:0;
+  padding:50px;
+  text-align:center;
+  background:#333 url(https://dl.dropbox.com/u/27352891/grain-dark.jpg);
+}
+.socialstuff {
+  background:#333;
+  background:rgba(0, 0, 0, 0.2);
+  display:inline-block;
+  padding:3px 15px 3px 15px;
+  border-radius:30px;
+  border-top:1px solid #242321;
+  border-bottom:1px solid #4e4e4e;
+}
+.socialstuff a {
+  width:18px;
+  height:19px;
+  display:inline-block;
+  position:relative;
+  margin-right:5px;
+  background-image:url(https://dl.dropbox.com/u/27352891/nu-social.png);
+}
+a[data-s]:hover:before {
+  content:"";
+  display:block;
+  width:0;
+  height:0;
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+  border-top:5px solid white;
+  position:relative;
+  top:-13px;
+  left:5px;
+  z-index:1;
+}
+a[data-s]:hover:after {
+  content:attr(data-s);
+  padding:2px 6px;
+  font-family:arial, san-serif;
+  font-size:.8em;
+  color:#343434;
+  text-shadow:0 1px rgba(255,255,255,.7);
+  position:absolute;
+  left:0;
+  top:-32px;
+  white-space:nowrap;
+  z-index:0;
+  border-radius:2px;
+  background:white;
+  box-shadow:-1px 5px 15px rgba(0,0,0,0.6);
+}
+a[data-s="Twitter"] {
+  background-position:0 0;
+  background-color: #07e2f5;
+}
+a[data-s="Facebook"] {background-position:-28px 0;}
+a[data-s="YouTube"] {background-position:-54px 0;}
+a[data-s="Linkedin"] {background-position:-81px 0;}
+a[data-s="Flickr"] {background-position:-108px 0;}
+a[data-s="Blogs"] { background-position:-133px 0;}
+a[data-s="RSS"] {background-position:-161px 0;}
+
+a[data-s="Twitter"]:hover {
+  background-position:0 19px;
+  background-color: #07e2f5;  
+}
+
+a[data-s="Facebook"]:hover {background-position:-28px 19px;}
+a[data-s="YouTube"]:hover {background-position:-54px 19px;}
+a[data-s="Linkedin"]:hover {background-position:-81px 19px;}
+a[data-s="Flickr"]:hover {background-position:-108px 19px;}
+a[data-s="Blogs"]:hover {background-position:-133px 19px;}
+a[data-s="RSS"]:hover {background-position:-161px 19px;}
